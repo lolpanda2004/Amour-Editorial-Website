@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #E2DA99;
+  color:  #333;
+  line-height:  1.6;
+}
+
+header {
+  background: #432f21;
+  color: #E2DA99;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #E2DA99;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #E2DA99;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #E2DA99;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  height: 100vh;
+  text-align: center;
+  color: #E2DA99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.btn {
+  background: #E2DA99;
+  padding: 12px 30px;
+  color: #000 ;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #E2DA99;
+}
