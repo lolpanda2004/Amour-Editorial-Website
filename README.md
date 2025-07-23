@@ -14,17 +14,16 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
-- [Contact](#contact)
 
 ---
 
-## 🧠 About Us
+ ## about Us
 
 Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission to help aspirants express their journeys with honesty and power through SOPs, LORs, and other impactful narratives. Backed by years of experience and acceptances to top global universities, the team ensures every story echoes across admission panels worldwide.
 
 ---
 
-## ✨ Features
+## features
 
 - 📘 Dedicated pages for Services, Team, Testimonials, FAQs, and Blog
 - 📅 Easy demo & consultation booking via Calendly
@@ -36,7 +35,7 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 
 ---
 
-## 📸 Preview
+## Preview
 
 This section gives a quick glance into the website's UI flow:
 
@@ -55,7 +54,7 @@ This section gives a quick glance into the website's UI flow:
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Role               | Technology              |
 |--------------------|--------------------------|
@@ -67,7 +66,7 @@ This section gives a quick glance into the website's UI flow:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 git clone https://github.com/sneha-94/Amour-Editorial-Website.git
@@ -80,7 +79,7 @@ npm start
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure 
 
 ```bash
 amour-editorials/
@@ -98,7 +97,7 @@ amour-editorials/
 
 ---
 
-## 📄 Requirement Document
+## Requirement Document
 
 [📎 Click here to view the Requirement Document (Google Drive)](https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing)
 
@@ -106,7 +105,7 @@ Includes detailed scope, objectives, features, UI structure, and technical expec
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome all contributors to make this project even better!
 
