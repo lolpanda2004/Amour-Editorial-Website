@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-6 sm:px-12 lg:px-24">
+      <section className="relative py-20 px-6 sm:px-12 lg:px-24 mt-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -46,25 +47,10 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
-          <p className="text-center text-gray-500 mb-8">Trusted by students accepted at</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center">
-            {[
-              "UCLA",
-              "UT Austin",
-              "UC Davis",
-              "University of Rochester",
-              "University of Glasgow",
-              "Bayes Business School"
-            ].map((university) => (
-              <div key={university} className="text-center">
-                <p className="text-gray-700 font-medium">{university}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="py-12 bg-gray-50">
+        <p className="text-center text-gray-500 mb-8 text-lg font-semibold">Trusted by students accepted at</p>
+        
+      </div>
 
       {/* Services Preview */}
       <section className="py-20 px-6 sm:px-12 lg:px-24">
