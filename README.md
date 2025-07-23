@@ -58,10 +58,10 @@ This section gives a quick glance into the website's UI flow:
 
 | Role               | Technology              |
 |--------------------|--------------------------|
-| Frontend           | React.js                 |
+| Frontend           | HTML                     |
 | Styling            | CSS / Tailwind / Bootstrap |
-| Forms              | Netlify Forms / Formspree |
-| Hosting            | Netlify / Vercel          |
+| Forms              | Node.js and Express      |
+| Hosting            | Render                   |
 | Version Control    | Git & GitHub             |
 
 ---
