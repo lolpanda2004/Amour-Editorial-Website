@@ -26,13 +26,13 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 
 ## ✨ Features
 
-- 📘 Dedicated pages for Services, Team, Testimonials, FAQs, and Blog  
-- 📅 Easy demo & consultation booking via Calendly  
-- 🔐 Secure file upload for draft sharing  
-- 📱 Fully responsive design (mobile + desktop)  
-- 🎯 SEO and accessibility focused (WCAG-compliant)  
-- 📎 Social media integration and sharing  
-- 📄 Privacy Policy and Terms of Use pages  
+- 📘 Dedicated pages for Services, Team, Testimonials, FAQs, and Blog
+- 📅 Easy demo & consultation booking via Calendly
+- 🔐 Secure file upload for draft sharing
+- 📱 Fully responsive design (mobile + desktop)
+- 🎯 SEO and accessibility focused (WCAG-compliant)
+- 📎 Social media integration and sharing
+- 📄 Privacy Policy and Terms of Use pages
 
 ---
 
@@ -42,16 +42,16 @@ This section gives a quick glance into the website's UI flow:
 
 | Page Name              | Description                                         |
 |------------------------|-----------------------------------------------------|
-| 🏠 **Landing Page**    | Introduces the brand, key offerings, and CTA links |
-| 🧍 **About Us**        | Shares the story, mission, and team bios           |
-| 📑 **Services**        | Describes SOP, LOR, and editing services in detail |
-| 💬 **Testimonials**    | Shows feedback and success stories from clients    |
-| ❓ **FAQs**            | Answers common questions about process & timelines |
-| 📚 **Resources**       | Offers sample documents and tips                   |
-| 📝 **Blog**            | Articles on writing, branding, and admissions      |
-| 📅 **Booking Page**    | Allows users to schedule demos/consultations       |
-| 📩 **Contact Page**    | Lets users submit queries or reach out via email   |
-| 🔐 **Privacy & Terms** | Legal sections for user protection & transparency  |
+| 🏠 Landing Page        | Introduces the brand, key offerings, and CTA links |
+| 🧍 About Us            | Shares the story, mission, and team bios           |
+| 📑 Services            | Describes SOP, LOR, and editing services in detail |
+| 💬 Testimonials        | Shows feedback and success stories from clients    |
+| ❓ FAQs                | Answers common questions about process & timelines |
+| 📚 Resources           | Offers sample documents and tips                   |
+| 📝 Blog                | Articles on writing, branding, and admissions      |
+| 📅 Booking Page        | Allows users to schedule demos/consultations       |
+| 📩 Contact Page        | Lets users submit queries or reach out via email   |
+| 🔐 Privacy & Terms     | Legal sections for user protection & transparency  |
 
 ---
 
@@ -70,23 +70,19 @@ This section gives a quick glance into the website's UI flow:
 ## 🚀 Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/sneha-94/Amour-Editorial-Website.git
-
-# Move into the project directory
 cd Amour-Editorial-Website
-
-# Install dependencies
 npm install
-
-# Start the local dev server
 npm start
+```
 
+> Open `http://localhost:3000` to view it in your browser.
 
+---
 
-📁 **Folder Structure**
+## 📁 Folder Structure
 
-
+```bash
 amour-editorials/
 ├── public/
 ├── src/
@@ -98,16 +94,20 @@ amour-editorials/
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
+---
 
-📄 Requirement Document Link
-https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing
+## 📄 Requirement Document
 
-Includes detailed scope, objectives, features, UI structure, and technical expectations of the project — verified by the project managers
+[📎 Click here to view the Requirement Document (Google Drive)](https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing)
 
+Includes detailed scope, objectives, features, UI structure, and technical expectations of the project — verified by the project managers.
 
+---
 
-🤝 Contributing
+## 🤝 Contributing
+
 We welcome all contributors to make this project even better!
 
 Steps to contribute:
