@@ -95,6 +95,15 @@ This section gives a quick glance into the website's UI flow:
 
 ---
 
+| Role               | Technology              |
+|--------------------|--------------------------|
+| Frontend           | HTML                     |
+| Styling            | CSS / Tailwind / Bootstrap |
+| Forms              | Node.js and Express      |
+| Hosting            | Render                   |
+| Version Control    | Git & GitHub             |
+
+---
 ---
 
 ## Installation
