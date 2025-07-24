@@ -14,6 +14,7 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
+- [Contribution Guidelines](#Contribution Guidelines)
 
 ---
 
@@ -109,13 +110,22 @@ Includes detailed scope, objectives, features, UI structure, and technical expec
 
 We welcome all contributors to make this project even better!
 
-Steps to contribute:
-Fork this repository
+### How to contribute:
+1. Fork this repository  
+2. Create a new branch  
+3. Commit your changes  
+4. Push and open a Pull Request  
 
-Create a new branch
+---
 
-Commit your changes
+### Contribution Guidelines
 
-Push and open a Pull Request
+We love community contributions! Please follow these rules when raising issues or making pull requests:
 
-✅ Make sure to follow the existing code style and structure
+1. **Check existing issues first** – Avoid creating duplicates.  
+2. **Use clear titles & descriptions** – Be specific about the problem or suggestion.  
+3. **For bugs** – Include steps to reproduce, expected behavior, and screenshots if possible.  
+4. **Stay respectful & constructive** – We value collaboration and kindness.  
+5. **Follow the project’s style** – Keep commit messages meaningful and code consistent with existing patterns.  
+
+Your contribution will be reviewed by the maintainers. Thank you for helping improve Amour Editorials!
