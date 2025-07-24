@@ -14,6 +14,7 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
+- [Connect with us](#connect-with-us)
 
 ---
 
@@ -56,6 +57,44 @@ This section gives a quick glance into the website's UI flow:
 
 ## Tech Stack
 
+### 🖥️ Frontend
+
+| Area              | Technology                     |
+|------------------|---------------------------------|
+| Framework         | Next.js (React-based)          |
+| Language          | JavaScript                     |
+| Styling           | Tailwind CSS                   |
+| Animations        | Framer Motion                  |
+| Form Handling     | Netlify Forms / Formspree      |
+| Booking           | Calendly Embed                 |
+| SEO & Performance | Built-in (Next.js optimized)   |
+
+### ⚙️ Backend
+
+| Area             | Technology                     |
+|------------------|--------------------------------|
+| Runtime           | Node.js                        |
+| Framework         | Express.js                    |
+| API               | RESTful API Endpoints          |
+| Security          | HTTPS, CORS, Secure Upload     |
+
+### ☁️ Hosting & Deployment
+
+| Area              | Service                        |
+|-------------------|--------------------------------|
+| Frontend Hosting  | Vercel / Netlify               |
+| Backend Hosting   | Render / Railway / Heroku / AWS |
+| Database (Optional) | Supabase (PostgreSQL + Auth) / MongoDB Atlas |
+
+### 🔄 Frontend–Backend Integration
+
+- API calls via **Axios** or **Fetch**  
+- Env-based URLs using `NEXT_PUBLIC_API_URL`  
+- Centralized API client  
+ 
+
+---
+
 | Role               | Technology              |
 |--------------------|--------------------------|
 | Frontend           | HTML                     |
@@ -64,6 +103,7 @@ This section gives a quick glance into the website's UI flow:
 | Hosting            | Render                   |
 | Version Control    | Git & GitHub             |
 
+---
 ---
 
 ## Installation
@@ -127,4 +167,15 @@ We love community contributions! Please follow these rules when raising issues o
 4. **Stay respectful & constructive** – We value collaboration and kindness.  
 5. **Follow the project’s style** – Keep commit messages meaningful and code consistent with existing patterns.  
 
+
+✅ Make sure to follow the existing code style and structure
+
+
+## Connect with Us
+- [Follow us on LinkedIn](https://www.linkedin.com/company/amour-editorial/)
+
+
+
+=======
 Your contribution will be reviewed by the maintainers. Thank you for helping improve Amour Editorials!
+
