@@ -139,7 +139,7 @@ amour-editorials/
 
 ## Requirement Document
 
-[📎 Click here to view the Requirement Document (Google Drive)](https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing)
+📎 <a href="https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing" target="_blank" rel="noopener noreferrer">Click here to view the Requirement Document</a>
 
 Includes detailed scope, objectives, features, UI structure, and technical expectations of the project — verified by the project managers.
 
