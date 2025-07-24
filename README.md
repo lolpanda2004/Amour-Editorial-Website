@@ -14,6 +14,7 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
+- [Connect with us](#connect-with-us)
 
 ---
 
@@ -56,13 +57,43 @@ This section gives a quick glance into the website's UI flow:
 
 ## Tech Stack
 
-| Role               | Technology              |
-|--------------------|--------------------------|
-| Frontend           | React.js                 |
-| Styling            | CSS / Tailwind / Bootstrap |
-| Forms              | Netlify Forms / Formspree |
-| Hosting            | Netlify / Vercel          |
-| Version Control    | Git & GitHub             |
+### 🖥️ Frontend
+
+| Area              | Technology                     |
+|------------------|---------------------------------|
+| Framework         | Next.js (React-based)          |
+| Language          | JavaScript                     |
+| Styling           | Tailwind CSS                   |
+| Animations        | Framer Motion                  |
+| Form Handling     | Netlify Forms / Formspree      |
+| Booking           | Calendly Embed                 |
+| SEO & Performance | Built-in (Next.js optimized)   |
+
+### ⚙️ Backend
+
+| Area             | Technology                     |
+|------------------|--------------------------------|
+| Runtime           | Node.js                        |
+| Framework         | Express.js                    |
+| API               | RESTful API Endpoints          |
+| Security          | HTTPS, CORS, Secure Upload     |
+
+### ☁️ Hosting & Deployment
+
+| Area              | Service                        |
+|-------------------|--------------------------------|
+| Frontend Hosting  | Vercel / Netlify               |
+| Backend Hosting   | Render / Railway / Heroku / AWS |
+| Database (Optional) | Supabase (PostgreSQL + Auth) / MongoDB Atlas |
+
+### 🔄 Frontend–Backend Integration
+
+- API calls via **Axios** or **Fetch**  
+- Env-based URLs using `NEXT_PUBLIC_API_URL`  
+- Centralized API client  
+ 
+
+---
 
 ---
 
@@ -119,3 +150,10 @@ Commit your changes
 Push and open a Pull Request
 
 ✅ Make sure to follow the existing code style and structure
+
+
+## Connect with Us
+- [Follow us on LinkedIn](https://www.linkedin.com/company/amour-editorial/)
+
+
+
