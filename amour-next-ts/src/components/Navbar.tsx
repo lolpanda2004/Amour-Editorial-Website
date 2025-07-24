@@ -64,7 +64,7 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/docs">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
