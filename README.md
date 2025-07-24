@@ -14,7 +14,6 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
-- [Contribution Guidelines](#Contribution Guidelines)
 
 ---
 
