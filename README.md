@@ -17,13 +17,13 @@
 
 ---
 
- ## about Us
+ ## About Us
 
 Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission to help aspirants express their journeys with honesty and power through SOPs, LORs, and other impactful narratives. Backed by years of experience and acceptances to top global universities, the team ensures every story echoes across admission panels worldwide.
 
 ---
 
-## features
+## Features
 
 - 📘 Dedicated pages for Services, Team, Testimonials, FAQs, and Blog
 - 📅 Easy demo & consultation booking via Calendly
