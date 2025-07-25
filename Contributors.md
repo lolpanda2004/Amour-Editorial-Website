@@ -28,9 +28,9 @@ We gratefully acknowledge the contributions of these individuals to the Amour Ed
     *Enhancement of Web-Page and Making changes in Design and Alignment of the Page*
     ![GitHub](https://img.shields.io/badge/GitHub-YourUsername-blue?logo=github)
 
-- 🛡️ **[Name of the Contributor]**- Role 
-        [EmailId](mailto:xyz@example.com)
-        *Role and your Contribution to this project*
+- 🛡️ **[Mohd Jarir Khan]**- Development of Navbar, About page, Blog page & Contact page 
+        [EmailId](kjarir23@gmail.com)
+        *Engineered the navbar, designing and development of ABOUT, Blog & Contact page*
         ![GitHub](https://img.shields.io/badge/GitHub-YourUsername-blue?logo=github)
 
 
