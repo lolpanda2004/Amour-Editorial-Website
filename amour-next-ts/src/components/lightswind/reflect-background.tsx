@@ -132,7 +132,7 @@ function ReflectBackground({
     const iResolutionLocation = gl.getUniformLocation(program, "iResolution");
     const iTimeLocation = gl.getUniformLocation(program, "iTime");
 
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     const render = () => {
       const width = canvas.clientWidth;
