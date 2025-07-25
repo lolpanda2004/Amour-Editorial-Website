@@ -45,7 +45,21 @@ const WoofyHoverImage: React.FC<WoofyHoverImageProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
-  const uniformsRef = useRef<any>(null);
+ const uniformsRef = useRef<{
+  u_texture: { value: THREE.Texture };
+  u_mouse: { value: THREE.Vector2 };
+  u_time: { value: number };
+  u_resolution: { value: THREE.Vector2 };
+  u_radius: { value: number };
+  u_speed: { value: number };
+  u_imageAspect: { value: number };
+  u_turbulenceIntensity: { value: number };
+  u_effectType: { value: number };
+  u_effectIntensity: { value: number };
+  u_invertMask: { value: boolean };
+  u_effectColor1: { value: THREE.Color };
+  u_effectColor2: { value: THREE.Color };
+} | null>(null);
   const animationIdRef = useRef<number | null>(null);
   const isMouseInsideRef = useRef(false);
   const targetMouseRef = useRef(new THREE.Vector2(0.5, 0.5));
