@@ -90,6 +90,13 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
+            
+            <NavigationMenuItem>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/success-stories">
+                Success Stories
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
                 Contact Us

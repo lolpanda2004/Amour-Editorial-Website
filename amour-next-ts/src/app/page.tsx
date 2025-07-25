@@ -196,12 +196,13 @@ export default function Home() {
 
           <div className="text-center mt-16">
             <Link
-              href="/testimonials"
+              href="/success-stories"
               className="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium gap-2"
             >
               Read more success stories
               <ArrowRight className="w-4 h-4" />
             </Link>
+
           </div>
         </div>
       </section>
