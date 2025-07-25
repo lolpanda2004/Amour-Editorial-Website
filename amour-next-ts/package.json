@@ -10,12 +10,9 @@
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.2.13",
-
-    "aos": "^2.3.4",
-
     "@supabase/supabase-js": "^2.52.1",
+    "aos": "^2.3.4",
     "axios": "^1.11.0",
-
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lightswind": "^3.1.12",
@@ -28,6 +25,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

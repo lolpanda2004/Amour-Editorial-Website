@@ -17,38 +17,38 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Statement of Purpose",
-    href: "/docs/primitives/alert-dialog",
+    href: "/services#sop",
     description:
-      "A statement of purpose is a document that outlines the purpose of a project or organization.",
+      "Craft compelling SOPs that showcase your unique journey and aspirations for university admissions.",
   },
   {
     title: "Letter of Recommendation",
-    href: "/docs/primitives/hover-card",
+    href: "/services#lor",
     description:
-      "A letter of recommendation is a document that recommends a person for a job or school.",
+      "Professional LOR editing that highlights your strengths and achievements effectively.",
   },
   {
     title: "Personal Essays",
-    href: "/docs/primitives/progress",
+    href: "/services#essays",
     description:
-      "A personal essay is a piece of writing that tells a story about a person's life.",
+      "Develop powerful personal narratives that resonate with admissions committees.",
   },
   {
     title: "Cover Letters",
-    href: "/docs/primitives/scroll-area",
-    description: "A cover letter is a letter that accompanies a resume when applying for a job.",
+    href: "/services#cover-letters",
+    description: "Create impactful cover letters that make you stand out to potential employers.",
   },
   {
-    title: "Resume",
-    href: "/docs/primitives/tabs",
+    title: "Resume Review",
+    href: "/services#resume",
     description:
-      "A resume is a document that summarizes a person's work experience, education, and skills.",
+      "Professional resume optimization to showcase your experience and skills effectively.",
   },
   {
-    title: "Transcripts",
-    href: "/docs/primitives/tooltip",
+    title: "Academic Editing",
+    href: "/services#academic",
     description:
-    "A transcript is a document that records a person's academic history.",
+    "Comprehensive editing services for academic papers, theses, and research documents.",
   },
 ]
 
@@ -64,14 +64,10 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
-
-
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/about"
               >
-
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -93,20 +89,17 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
-
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/blog"
               >
-
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-                <NavigationMenuLink
+              <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
-                href="/contact"
+                href="/success-stories"
               >
                 Success Stories
               </NavigationMenuLink>
