@@ -59,21 +59,32 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/"
+              >
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
+
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
+
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/docs"
+              >
+
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gradient-to-br from-orange-200 via-white to-stone-100">
                   {components.map((component) => (
                     <ListItem
+                      className="border border-white/30 rounded-lg bg-orange-200/10 backdrop-blur-3xl shadow-md hover:shadow-lg hover:scale-105 ease-in-out transition-all duration-300 "
                       key={component.title}
                       title={component.title}
                       href={component.href}
@@ -84,16 +95,29 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            
+
             <NavigationMenuItem>
+
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/"
+              >
+
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
+            
             <NavigationMenuItem>
-<<<<<<< HEAD
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/success-stories">
+                Success Stories
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-=======
+
                 <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/success-stories"
@@ -107,7 +131,11 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 className={navigationMenuTriggerStyle()}
                 href="/contact"
               >
->>>>>>> f711feb (developed the contact us page)
+
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/"
+              >
                 Contact Us
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -136,7 +164,7 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
         </NavigationMenu>
       </nav>
     </div>
-  )
+  );
 }
 
 function ListItem({

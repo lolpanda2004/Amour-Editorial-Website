@@ -97,7 +97,6 @@ export default function AboutPage() {
   ]
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
@@ -203,7 +202,7 @@ export default function AboutPage() {
               </Card>
             ))}
           </div>
-=======
+
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 px-6 sm:px-12 lg:px-24" data-aos="fade-up">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
@@ -250,7 +249,6 @@ export default function AboutPage() {
           <Link href="/booking" className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg px-8 py-3 text-lg transition-colors" data-aos="fade-up">
             Book a Consultation
           </Link>
->>>>>>> f711feb (developed the contact us page)
         </div>
       </section>
 
@@ -328,3 +326,4 @@ export default function AboutPage() {
     </div>
   )
 }
+
