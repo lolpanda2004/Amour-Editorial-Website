@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader } from "@/components copy/ui/card"
 import { Button } from "@/components copy/ui/button"
 import { Badge } from "@/components copy/ui/badge"
@@ -442,3 +443,17 @@ export default function BlogPage() {
     </div>
   )
 }
+=======
+import { FC } from 'react';
+
+const blogPage: FC = () => {
+  return (
+    <div>
+      <h1>blog Page</h1>
+      {/* Add content here */}
+    </div>
+  );
+};
+
+export default blogPage;
+>>>>>>> upstream/main

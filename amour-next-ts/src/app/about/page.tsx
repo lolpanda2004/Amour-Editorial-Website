@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components copy/ui/card"
 import { Award, Target, Heart, Lightbulb, Users, Clock, Shield } from "lucide-react"
 
@@ -279,3 +280,17 @@ export default function AboutPage() {
     </div>
   )
 }
+=======
+import { FC } from 'react';
+
+const aboutPage: FC = () => {
+  return (
+    <div>
+      <h1>about Page</h1>
+      {/* Add content here */}
+    </div>
+  );
+};
+
+export default aboutPage;
+>>>>>>> upstream/main
