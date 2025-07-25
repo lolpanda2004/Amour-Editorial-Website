@@ -15,7 +15,7 @@ const stories = [
     program: "MBA, Bayes Business School",
     background: "Priya had five years of experience in marketing but felt her leadership achievements were scattered across roles.",
     dream: "To get into a top MBA program to pivot into strategic consulting.",
-    howWeHelped: "We worked with Priya to craft an SOP that highlighted concrete leadership stories, measurable impact, and future goals aligning with Bayes&rsquo; values.",
+    howWeHelped: "We worked with Priya to craft an SOP that highlighted concrete leadership stories, measurable impact, and future goals aligning with best values.",
     outcome: "Her application became a clear, compelling narrative, securing her a spot at Bayes Business School.",
   },
   {
@@ -24,13 +24,13 @@ const stories = [
     background: "Arjun came from an engineering background but wanted to pivot into development economics.",
     dream: "To show admissions that his non-traditional path was actually an advantage.",
     howWeHelped: "We reframed his engineering projects as problem-solving skills transferable to economics, and polished his SOP to emphasize unique perspectives.",
-    outcome: "Arjun&rsquo;s story stood out, leading to acceptance at the University of Glasgow.",
+    outcome: "Arjun's story stood out, leading to acceptance at the University of Glasgow.",
   },
 ];
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="max-w-7xl mx-auto py-16 px-6 sm:px-12 lg:px-24">
+    <main className="max-w-7xl mx-auto py-16 px-6 sm:px-12 lg:px-24 bg-gradient-to-b from-gray-50 to-white">
       <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6">
         Success <span className="text-amber-600">Stories</span>
       </h1>
@@ -42,9 +42,9 @@ export default function SuccessStoriesPage() {
         {stories.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow hover:shadow-md transition-shadow"
+            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow hover:-translate-y-1 border border-gray-100 hover:border-amber-200"
           >
-            <h3 className="font-semibold text-gray-900 text-center mb-1">{item.name}</h3>
+            <h3 className="font-semibold text-gray-900 text-center text-lg mb-1">{item.name}</h3>
             <p className="text-gray-500 text-center mb-4">{item.program}</p>
             <p className="italic text-gray-700 mb-2">{item.dream}</p>
             <p className="text-gray-600 mb-2">{item.background}</p>
@@ -61,7 +61,7 @@ export default function SuccessStoriesPage() {
       <div className="text-center mt-12">
         <Link
           href="/booking"
-          className="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium gap-2"
+          className="inline-flex items-center bg-amber-600 text-white hover:bg-amber-700 font-medium gap-2 px-6 py-3 rounded-full shadow hover:shadow-md transition"
         >
           Start your journey
         </Link>
