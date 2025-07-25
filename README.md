@@ -103,26 +103,10 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 ```bash
 git clone https://github.com/sneha-94/Amour-Editorial-Website.git
 cd Amour-Editorial-Website
-```
-
-### Frontend Setup
-
-```bash
-cd amour-next-ts
-npm install
-npm run dev
+npm run start
 ```
 
 > Access frontend: `http://localhost:3000`
-
-### Backend Setup
-
-```bash
-cd amour-Backend
-npm install
-node index.js
-```
-
 > Access backend: `http://localhost:5000` (or your configured port)
 
 ---
