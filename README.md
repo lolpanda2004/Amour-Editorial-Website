@@ -14,168 +14,192 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
-- [Connect with us](#connect-with-us)
+- [Connect with Us](#connect-with-us)
 
 ---
 
- ## About Us
+## 🧠 About Us
 
 Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission to help aspirants express their journeys with honesty and power through SOPs, LORs, and other impactful narratives. Backed by years of experience and acceptances to top global universities, the team ensures every story echoes across admission panels worldwide.
 
 ---
 
-## Features
+## 🌟 Features
 
-- 📘 Dedicated pages for Services, Team, Testimonials, FAQs, and Blog
-- 📅 Easy demo & consultation booking via Calendly
-- 🔐 Secure file upload for draft sharing
-- 📱 Fully responsive design (mobile + desktop)
-- 🎯 SEO and accessibility focused (WCAG-compliant)
-- 📎 Social media integration and sharing
-- 📄 Privacy Policy and Terms of Use pages
+- 🖥️ Fully responsive UI with 3D effects and animations
+- 📄 Secure form submissions and email integrations
+- 📅 Calendly booking support
+- 🔐 File uploads through backend integration
+- ⚙️ Modular and scalable Next.js frontend
+- ✨ Advanced UI with Framer Motion and custom TSX components
+- 🧪 TypeScript support and linting
+- 🎯 SEO, performance, and accessibility focused
+- 📎 Social sharing & legal pages (Privacy, Terms)
 
 ---
 
-## Preview
-
-This section gives a quick glance into the website's UI flow:
+## 📷 Preview
 
 | Page Name              | Description                                         |
 |------------------------|-----------------------------------------------------|
-| 🏠 Landing Page        | Introduces the brand, key offerings, and CTA links |
-| 🧍 About Us            | Shares the story, mission, and team bios           |
-| 📑 Services            | Describes SOP, LOR, and editing services in detail |
-| 💬 Testimonials        | Shows feedback and success stories from clients    |
-| ❓ FAQs                | Answers common questions about process & timelines |
-| 📚 Resources           | Offers sample documents and tips                   |
-| 📝 Blog                | Articles on writing, branding, and admissions      |
-| 📅 Booking Page        | Allows users to schedule demos/consultations       |
-| 📩 Contact Page        | Lets users submit queries or reach out via email   |
-| 🔐 Privacy & Terms     | Legal sections for user protection & transparency  |
+| 🏠 Landing Page        | Engaging homepage with animation & brand overview  |
+| 🧍 About Us            | Mission, vision, and team insights                  |
+| 📑 Services            | SOP, LOR, Editing service details                   |
+| 💬 Testimonials        | Client reviews and success stories                  |
+| ❓ FAQs                | Process and timeline clarifications                 |
+| 📚 Resources           | Samples and writing tips                            |
+| 📝 Blog                | Informative articles on writing, branding, etc.     |
+| 📅 Booking Page        | Calendly embed for consultation scheduling          |
+| 📩 Contact Page        | Contact form connected to backend                   |
+| 🔐 Privacy & Terms     | User protection documents                           |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### 🖥️ Frontend
+### 🌐 Frontend – `amour-next-ts`
 
-| Area              | Technology                     |
-|------------------|---------------------------------|
-| Framework         | Next.js (React-based)          |
-| Language          | JavaScript                     |
-| Styling           | Tailwind CSS                   |
-| Animations        | Framer Motion                  |
-| Form Handling     | Netlify Forms / Formspree      |
-| Booking           | Calendly Embed                 |
-| SEO & Performance | Built-in (Next.js optimized)   |
+| Area               | Technology                      |
+|-------------------|----------------------------------|
+| Framework          | Next.js (App Router)             |
+| Language           | TypeScript                      |
+| Styling            | Tailwind CSS                    |
+| Animations         | Framer Motion                   |
+| Component Library  | Custom + ShadCN (UI primitives) |
+| Icons              | Lucide                          |
+| Build Tool         | Vite / Next.js build            |
+| Linting            | ESLint                          |
 
-### ⚙️ Backend
+### 🔧 Backend – `amour-Backend`
 
-| Area             | Technology                     |
-|------------------|--------------------------------|
-| Runtime           | Node.js                        |
-| Framework         | Express.js                    |
-| API               | RESTful API Endpoints          |
-| Security          | HTTPS, CORS, Secure Upload     |
+| Area               | Technology                      |
+|-------------------|----------------------------------|
+| Runtime            | Node.js                         |
+| Framework          | Express.js                      |
+| API Routes         | `/form` (formRoutes.js)         |
+| Controllers        | `formController.js`             |
+| Email Service      | Nodemailer (`emailService.js`)  |
+| Security           | Helmet, CORS, HTTPS             |
 
 ### ☁️ Hosting & Deployment
 
-| Area              | Service                        |
-|-------------------|--------------------------------|
-| Frontend Hosting  | Vercel / Netlify               |
-| Backend Hosting   | Render / Railway / Heroku / AWS |
-| Database (Optional) | Supabase (PostgreSQL + Auth) / MongoDB Atlas |
-
-### 🔄 Frontend–Backend Integration
-
-- API calls via **Axios** or **Fetch**  
-- Env-based URLs using `NEXT_PUBLIC_API_URL`  
-- Centralized API client  
- 
+| Component        | Platform                         |
+|------------------|----------------------------------|
+| Frontend Hosting | Vercel                           |
+| Backend Hosting  | Render / Railway / AWS / Cyclic  |
+| DB (Optional)    | Supabase / MongoDB Atlas         |
+| CI/CD            | GitHub Actions (optional)        |
 
 ---
 
-| Role               | Technology              |
-|--------------------|--------------------------|
-| Frontend           | HTML                     |
-| Styling            | CSS / Tailwind / Bootstrap |
-| Forms              | Node.js and Express      |
-| Hosting            | Render                   |
-| Version Control    | Git & GitHub             |
+## 🚀 Installation
 
----
----
+### Prerequisites:
+- Node.js ≥ 18.x
+- npm ≥ 9.x
 
-## Installation
+### Clone the Repository
 
 ```bash
 git clone https://github.com/sneha-94/Amour-Editorial-Website.git
 cd Amour-Editorial-Website
-npm install
-npm start
 ```
 
-> Open `http://localhost:3000` to view it in your browser.
+### Frontend Setup
+
+```bash
+cd amour-next-ts
+npm install
+npm run dev
+```
+
+> Access frontend: `http://localhost:3000`
+
+### Backend Setup
+
+```bash
+cd amour-Backend
+npm install
+node index.js
+```
+
+> Access backend: `http://localhost:5000` (or your configured port)
 
 ---
 
-## Folder Structure 
+## 📁 Folder Structure
 
-```bash
-amour-editorials/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── App.js
-│   └── index.js
-├── .gitignore
-├── package.json
+```
+Amour-Editorial-Website/
+├── amour-Backend/
+│   ├── Controllers/
+│   ├── routes/
+│   ├── utilise/
+│   ├── index.js
+│   ├── package.json
+│   └── ...
+├── amour-next-ts/
+│   ├── src/
+│   │   ├── app/
+│   │   ├── components/
+│   │   └── lib/
+│   ├── public/
+│   └── ...
+├── PROJECT-SETUP.md
+├── Contributors.md
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## Requirement Document
+## 📄 Requirement Document
 
-📎 <a href="https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing" target="_blank" rel="noopener noreferrer">Click here to view the Requirement Document</a>
-
-Includes detailed scope, objectives, features, UI structure, and technical expectations of the project — verified by the project managers.
+📎 [Click to view the complete project requirement document](https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing)
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-We welcome all contributors to make this project even better!
+We welcome contributions from developers, designers, writers, and testers! 💜
 
-### How to contribute:
-1. Fork this repository  
-2. Create a new branch  
-3. Commit your changes  
-4. Push and open a Pull Request  
+### How to Contribute
 
----
+1. **Fork** the repository  
+2. **Clone** to local  
+3. **Create a new branch** for your feature/bug  
+4. **Commit changes** with meaningful messages  
+5. **Push** and create a Pull Request  
 
 ### Contribution Guidelines
 
-We love community contributions! Please follow these rules when raising issues or making pull requests:
+- 🧹 Maintain code style & lint rules  
+- 🚫 Don’t break existing features  
+- 🧪 Write/modify tests (if applicable)  
+- 💬 Be clear in PR descriptions  
+- 🙌 Respect others and give constructive feedback  
 
-1. **Check existing issues first** – Avoid creating duplicates.  
-2. **Use clear titles & descriptions** – Be specific about the problem or suggestion.  
-3. **For bugs** – Include steps to reproduce, expected behavior, and screenshots if possible.  
-4. **Stay respectful & constructive** – We value collaboration and kindness.  
-5. **Follow the project’s style** – Keep commit messages meaningful and code consistent with existing patterns.  
+---
+
+## 📬 Connect with Us
+
+- 🌐 [Official Website](https://amour-editorial.com)
+- 💼 [LinkedIn](https://www.linkedin.com/company/amour-editorial/)
+- 📧 Email: contact@amour-editorial.com
+
+---
+
+_Your contributions will be reviewed and appreciated! Let’s build something impactful together._
 
 
-✅ Make sure to follow the existing code style and structure
+---
 
+## 📸 Project Screenshots
 
-## Connect with Us
-- [Follow us on LinkedIn](https://www.linkedin.com/company/amour-editorial/)
-
-
-
-=======
-Your contribution will be reviewed by the maintainers. Thank you for helping improve Amour Editorials!
-
+| Page / Feature      | Preview                                   |
+|---------------------|-------------------------------------------|
+| Landing Page        | ![Landing Page](images/landing-page.png) |
+| Services Section    | ![Services](images/services.png)         |
+| Booking Flow        | ![Booking](images/booking.png)           |
+| Testimonials        | ![Testimonials](images/testimonials.png) |
+| Responsive View     | ![Mobile View](images/mobile-view.png)   |
