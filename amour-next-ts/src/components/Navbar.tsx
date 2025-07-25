@@ -91,7 +91,23 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
+<<<<<<< HEAD
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+=======
+                <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/success-stories"
+              >
+                Success Stories
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/contact"
+              >
+>>>>>>> f711feb (developed the contact us page)
                 Contact Us
               </NavigationMenuLink>
             </NavigationMenuItem>

@@ -144,15 +144,15 @@ export default function BlogPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white pt-16" data-aos="fade-up">
       {/* Hero Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
               Our <span className="text-gradient">Blog</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8" data-aos="fade-up">
               Expert insights, tips, and strategies to help you succeed in your academic journey. Stay updated with the
               latest trends in application writing.
             </p>
@@ -178,12 +178,12 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-aos="fade-up">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-3">
             {/* Featured Post */}
-            <div className="mb-12 animate-fade-in">
+            <div className="mb-12 animate-fade-in" data-aos="fade-up">
               <Badge className="mb-4 bg-primary text-white">Featured Article</Badge>
               <Card className="border shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
                 <div className="md:flex">
@@ -223,7 +223,7 @@ export default function BlogPage() {
             </div>
 
             {/* Trending Posts */}
-            <div className="mb-12">
+            <div className="mb-12" data-aos="fade-up">
               <div className="flex items-center space-x-2 mb-6">
                 <TrendingUp className="h-5 w-5 text-primary" />
                 <h2 className="text-2xl font-bold text-gray-900">Trending Now</h2>
@@ -271,7 +271,7 @@ export default function BlogPage() {
             </div>
 
             {/* All Posts */}
-            <div>
+            <div data-aos="fade-up">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest Articles</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {blogPosts.map((post, index) => (
@@ -313,7 +313,7 @@ export default function BlogPage() {
             </div>
 
             {/* Load More */}
-            <div className="text-center mt-12">
+            <div className="text-center mt-12" data-aos="fade-up">
               <Button variant="outline" size="lg">
                 Load More Articles
               </Button>
@@ -321,7 +321,7 @@ export default function BlogPage() {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1" data-aos="fade-up">
             {/* Categories */}
             <Card className="border shadow-sm mb-8 animate-slide-up">
               <CardHeader>
@@ -421,15 +421,15 @@ export default function BlogPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" data-aos="fade-up">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <BookOpen className="h-12 w-12 text-primary mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Need Personalized Help?</h2>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          <BookOpen className="h-12 w-12 text-primary mx-auto mb-6" data-aos="fade-up" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-6" data-aos="fade-up">Need Personalized Help?</h2>
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed" data-aos="fade-up">
             While our blog provides valuable insights, sometimes you need personalized guidance. Our expert writers are
             here to help you craft the perfect application.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link href="/contact">Get Free Consultation</Link>
             </Button>
