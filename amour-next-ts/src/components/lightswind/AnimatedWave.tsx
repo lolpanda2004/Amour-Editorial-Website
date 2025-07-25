@@ -568,13 +568,16 @@ const AnimatedWave: React.FC<AnimatedWaveProps> = ({
 
     // --- Event Listeners ---
     // Mouse move event for interaction
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!mouseInteraction) return; // Only process if mouse interaction is enabled
-      if (sceneElementsRef.current) {
-        sceneElementsRef.current.mouse.x = device.mouseCenterX(e);
-        sceneElementsRef.current.mouse.y = device.mouseCenterY(e);
-      }
-    };
+    function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const offsetX = clientX - centerX;
+      const offsetY = clientY - centerY;
+
+      setMouseOffset({ x: offsetX, y: offsetY });
+    }
 
     if (mouseInteraction) {
       window.addEventListener("mousemove", handleMouseMove);

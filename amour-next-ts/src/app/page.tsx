@@ -36,7 +36,8 @@ export default function Home() {
                 className="text-lg sm:text-xl text-gray-600 max-w-2xl"
               >
                 Craft compelling SOPs, LORs, and personal narratives that open
-                doors to the world's top universities and career opportunities.
+                doors to the world&#39;s top universities and career
+                opportunities.
               </p>
               <div
                 data-aos="fade-up"
@@ -235,8 +236,8 @@ export default function Home() {
               data-aos="fade-up"
               className="text-lg text-gray-600 max-w-3xl mx-auto"
             >
-              Hear from students who've turned their dreams into reality with
-              our help.
+              Hear from students who&#39;ve turned their dreams into reality
+              with our help.
             </p>
           </div>
 
@@ -290,7 +291,6 @@ export default function Home() {
               Read more success stories
               <ArrowRight className="w-4 h-4" />
             </Link>
-
           </div>
         </div>
       </section>
@@ -308,7 +308,7 @@ export default function Home() {
             data-aos="fade-up"
             className="text-lg text-amber-100 max-w-3xl mx-auto mb-8"
           >
-            Let's craft a narrative that opens doors to your future.
+            Let&#39;s craft a narrative that opens doors to your future.
           </p>
           <div
             data-aos="fade-up"
