@@ -6,6 +6,7 @@ import "./globals.css";
 import { NavigationMenuDemo as Navbar } from "@/components/Navbar";
 import Head from "next/head";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,7 +66,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) { 
   return (
     <html lang="en">
       <Head>
