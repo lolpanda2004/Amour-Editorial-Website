@@ -267,7 +267,7 @@ export default function Home() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="text-amber-600 text-4xl mb-4">"</div>
+                <div className="text-amber-600 text-4xl mb-4">&quot;</div>
                 <p data-aos="fade-up" className="text-gray-700 italic mb-6">
                   {testimonial.quote}
                 </p>
