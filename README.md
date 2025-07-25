@@ -183,7 +183,7 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 
 ## 📬 Connect with Us
 
-- 🌐 [Official Website](https://amour-editorial.com)
+- 🌐 [Official Website](https://amour-editorial-website.vercel.app/)
 - 💼 [LinkedIn](https://www.linkedin.com/company/amour-editorial/)
 - 📧 Email: contact@amour-editorial.com
 
