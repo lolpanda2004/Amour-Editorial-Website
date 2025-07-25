@@ -215,6 +215,7 @@ export default function AboutPage() {
             ))}
           </div>
 
+
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 px-6 sm:px-12 lg:px-24" data-aos="fade-up">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">

@@ -14,6 +14,7 @@
 - [Folder Structure](#folder-structure)
 - [Requirement Document](#requirement-document)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 - [Connect with Us](#connect-with-us)
 
 ---
@@ -165,6 +166,41 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 
 ---
 
+## 👥 Contributors
+
+### Core Team
+
+- 🧠 **Lathika D** - Founder & Creative Director  
+  [lathika@amoureditorial.com](mailto:lathika@amoureditorial.com)  
+  *Vision, content strategy, and brand direction*
+
+- 🧠 **Akshai Krishna A** - Reporting Manager & Co-Founder  
+  [akshai@amoureditorial.com](mailto:akshai@amoureditorial.com)  
+  *Technical requirements, project management*
+
+- 🧠 **Suraksha M** - Social Media Manager  
+  [suraksha@amoureditorial.com](mailto:suraksha@amoureditorial.com)  
+  *Content validation, social integration*
+
+### Community Contributors
+
+- 🛡️ **Sayman Lal**  
+  [buisnesssayman@gmail.com](mailto:buisnesssayman@gmail.com)  
+  *Project Setup, SEO, Next.js & Typescript implementation*  
+  [![GitHub](https://img.shields.io/badge/GitHub-SaymanLal-blue?logo=github)](https://github.com/SaymanLal)
+
+- 🛡️ **Krithika Meenakshi**  
+  [krithika.meenakshi11@gmail.com](mailto:krithika.meenakshi11@gmail.com)  
+  *Frontend Development, UI/UX, Design*  
+  [![GitHub](https://img.shields.io/badge/GitHub-KrithikaMeenakshi-blue?logo=github)](https://github.com/KrithikaMeenakshi)
+
+- 🛡️ **Mohd Jarir Khan**  
+  [kjarir23@gmail.com](mailto:kjarir23@gmail.com)  
+  *Navbar, About, Blog & Contact page development*  
+  [![GitHub](https://img.shields.io/badge/GitHub-kjarir-blue?logo=github)](https://github.com/kjarir)
+
+---
+
 ## 📬 Connect with Us
 
 - 🌐 [Official Website](https://amour-editorial-website.vercel.app/)
@@ -174,7 +210,6 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 ---
 
 _Your contributions will be reviewed and appreciated! Let’s build something impactful together._
-
 
 ---
 

@@ -29,6 +29,10 @@ We gratefully acknowledge the contributions of these individuals to the Amour Ed
     ![GitHub](https://img.shields.io/badge/GitHub-YourUsername-blue?logo=github)
 
 - 🛡️ **[Mohd Jarir Khan]**- Development of Navbar, About page, Blog page & Contact page 
+        [EmailId](kjarir23@gmail.com)
+        *Engineered the navbar, designing and development of ABOUT, Blog & Contact page*
+        ![GitHub](https://img.shields.io/badge/GitHub-YourUsername-blue?logo=github)
+
 
 
 

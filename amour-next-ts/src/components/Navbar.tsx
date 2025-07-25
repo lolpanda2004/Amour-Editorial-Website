@@ -59,16 +59,13 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/"
-              >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
+
 
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
@@ -95,10 +92,9 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
-
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
+
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/blog"
@@ -107,7 +103,6 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
-            
             <NavigationMenuItem>
                 <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
@@ -116,53 +111,11 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 Success Stories
               </NavigationMenuLink>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
-
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-
-                <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/success-stories"
-              >
-                Success Stories
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/contact"
-              >
-
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/"
-              >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/contact">
                 Contact Us
               </NavigationMenuLink>
             </NavigationMenuItem>
-            {/* <NavigationMenuItem>
-              <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-4">
-                  <li>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleHelpIcon />
-                      Backlog
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleIcon />
-                      To Do
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleCheckIcon />
-                      Done
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
