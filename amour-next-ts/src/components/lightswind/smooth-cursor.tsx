@@ -129,9 +129,9 @@ export function SmoothCursor({
   onCursorLeave,
   disabled = false,
 }: SmoothCursorProps) {
-  const [isMoving, setIsMoving] = useState(false);
+  const [isMoving, setIsMoving] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [isVisible, setIsVisible] = useState(true);
-  const [isClicking, setIsClicking] = useState(false);
+  const [isClicking, setIsClicking] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [trail, setTrail] = useState<Position[]>([]);
 
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
@@ -178,7 +178,7 @@ export function SmoothCursor({
       if (!showTrail) return;
 
       setTrail(function (prev) {
-        var newTrail = [pos].concat(prev.slice(0, trailLength - 1));
+        const newTrail = [pos, ...prev.slice(0, trailLength - 1)];
         return newTrail;
       });
     };

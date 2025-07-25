@@ -85,11 +85,11 @@ export default function SmokeyCursor({
     if (!canvas) return; // Guard canvas early
 
     // Pointer and config setup
-    let pointers: Pointer[] = [pointerPrototype()];
+    const pointers: Pointer[] = [pointerPrototype()];
 
     // All these are guaranteed numbers due to destructuring defaults
     // So we cast them to remove TS warnings:
-    let config = {
+    const config = {
       SIM_RESOLUTION: simulationResolution,
       DYE_RESOLUTION: dyeResolution,
       CAPTURE_RESOLUTION: captureResolution,

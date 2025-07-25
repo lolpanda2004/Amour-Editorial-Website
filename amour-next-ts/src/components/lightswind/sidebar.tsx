@@ -149,7 +149,8 @@ export function SidebarProvider({
     setActiveMenuItem(potentialMenuItemValue);
     // No need to call updateIndicatorPosition directly here.
     // The useLayoutEffect below, which depends on menuRefsVersion, will handle it.
-  }, [window.location.pathname, window.location.search]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Remove window.location.* from deps
 
   // Primary useLayoutEffect for synchronous indicator updates
   React.useLayoutEffect(() => {
@@ -202,7 +203,16 @@ export function useSidebar() {
   return context;
 }
 
-interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
+// Remove empty interfaces, use type alias for empty props
+type SidebarProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+type SidebarHeaderProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarContentProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarGroupProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarGroupLabelProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarGroupContentProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarFooterProps = React.HTMLAttributes<HTMLDivElement>;
+type SidebarMenuProps = React.HTMLAttributes<HTMLDivElement>;
 
 export function Sidebar({ className, children, ...props }: SidebarProps) {
   const { expanded } = useSidebar();
@@ -225,9 +235,6 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {
     </div>
   );
 }
-
-interface SidebarTriggerProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { expanded, onChange } = useSidebar();
@@ -256,8 +263,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   );
 }
 
-interface SidebarHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
-
 export function SidebarHeader({
   className,
   children,
@@ -278,8 +283,6 @@ export function SidebarHeader({
     </div>
   );
 }
-
-interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function SidebarContent({
   className,
@@ -303,8 +306,6 @@ export function SidebarContent({
   );
 }
 
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
-
 export function SidebarGroup({
   className,
   children,
@@ -316,8 +317,6 @@ export function SidebarGroup({
     </div>
   );
 }
-
-interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function SidebarGroupLabel({
   className,
@@ -343,9 +342,6 @@ export function SidebarGroupLabel({
   );
 }
 
-interface SidebarGroupContentProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
-
 export function SidebarGroupContent({
   className,
   children,
@@ -357,8 +353,6 @@ export function SidebarGroupContent({
     </div>
   );
 }
-
-interface SidebarFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function SidebarFooter({
   className,
@@ -382,8 +376,6 @@ export function SidebarFooter({
     </div>
   );
 }
-
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function SidebarMenu({
   className,
@@ -430,29 +422,26 @@ export function SidebarMenuItem({
   ...props
 }: SidebarMenuItemProps) {
   const itemRef = React.useRef<HTMLDivElement>(null);
-  // NEW: Get notifyMenuItemRefChange from context
-  const { activeMenuItem, menuItemRefs, notifyMenuItemRefChange } =
-    useSidebar();
-  const menuItemId = value || React.useId();
+  const { activeMenuItem, menuItemRefs, notifyMenuItemRefChange } = useSidebar();
+  // Always call useId, don't call conditionally
+  const generatedId = React.useId();
+  const menuItemId = value || generatedId;
   const isActive = activeMenuItem === menuItemId;
 
   const isInView = useInView(itemRef, { once: false, amount: 0.5 });
 
-  // Register this menu item when it mounts
-  // and NOTIFY the provider about the change
   React.useEffect(() => {
     if (itemRef.current) {
       menuItemRefs.current.set(menuItemId, itemRef.current);
-      // Notify the provider that a ref has been added, potentially triggering
-      // the useLayoutEffect if this item is the active one.
       notifyMenuItemRefChange();
     }
+    // Fix: capture ref in variable for cleanup
+    const currentRefs = menuItemRefs.current;
     return () => {
-      menuItemRefs.current.delete(menuItemId);
-      // Also notify when a ref is removed (component unmounts)
+      currentRefs.delete(menuItemId);
       notifyMenuItemRefChange();
     };
-  }, [menuItemRefs, menuItemId, notifyMenuItemRefChange]); // Added notifyMenuItemRefChange to deps
+  }, [menuItemRefs, menuItemId, notifyMenuItemRefChange]);
 
   return (
     <motion.div
@@ -492,14 +481,13 @@ export function SidebarMenuButton({
     setActiveMenuItem,
     updateIndicatorPosition,
   } = useSidebar();
-  const menuItemId = value || React.useId();
+  // Always call useId, don't call conditionally
+  const generatedId = React.useId();
+  const menuItemId = value || generatedId;
   const isActive = activeMenuItem === menuItemId;
 
   const handleClick = React.useCallback(() => {
     setActiveMenuItem(menuItemId);
-    // Explicitly call updateIndicatorPosition immediately on click.
-    // This provides immediate visual feedback for direct clicks, overriding
-    // any potential slight delay from the useLayoutEffect waiting for version update.
     updateIndicatorPosition(menuItemId);
 
     if (props.onClick && typeof props.onClick === "function") {
@@ -511,7 +499,7 @@ export function SidebarMenuButton({
       } as React.MouseEvent<HTMLDivElement>;
       props.onClick(dummyEvent);
     }
-  }, [menuItemId, setActiveMenuItem, updateIndicatorPosition, props.onClick]);
+  }, [menuItemId, setActiveMenuItem, updateIndicatorPosition, props, props.onClick]); // Add props to deps
 
   const sharedClassName =
     "flex cursor-pointer items-center rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ";
