@@ -67,10 +67,14 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
+
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
+
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/about"
               >
+
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -93,10 +97,13 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/blog"
               >
+
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -111,6 +118,23 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+
+                <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/success-stories"
+              >
+                Success Stories
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/contact"
+              >
+
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle()}
                 href="/"
