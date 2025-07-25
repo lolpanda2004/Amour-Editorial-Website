@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-const privacy-policyPage: FC = () => {
+const PrivacyPolicyPage: FC = () => {
   return (
     <div>
-      <h1>privacy-policy Page</h1>
+      <h1>Privacy Policy Page</h1>
       {/* Add content here */}
     </div>
   );
 };
 
-export default privacy-policyPage;
+export default PrivacyPolicyPage;
