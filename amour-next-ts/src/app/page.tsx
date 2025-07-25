@@ -206,6 +206,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/*FAQ Section*/}
+
+ <section className="py-20 bg-white px-6 sm:px-12 lg:px-24">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        Frequently Asked <span className="text-amber-600">Questions</span>
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Got questions? We’ve got answers. Here are some common queries from students like you.
+      </p>
+    </div>
+
+    <div className="space-y-6">
+      {[
+        {
+          question: "What types of documents do you help with?",
+          answer:
+            "We assist with Statements of Purpose (SOP), Letters of Recommendation (LOR), personal essays, and other academic and professional documents."
+        },
+        {
+          question: "Can I get a custom SOP tailored to my profile?",
+          answer:
+            "Absolutely! We specialize in creating personalized SOPs that reflect your unique story, goals, and achievements."
+        },
+        {
+          question: "Do you offer editing for already written documents?",
+          answer:
+            "Yes, we offer thorough document editing to improve clarity, structure, grammar, and overall impact."
+        },
+        {
+          question: "How do I book a consultation?",
+          answer:
+            "You can book a consultation through our website by clicking the 'Book a Consultation' button and selecting a suitable slot."
+        },
+        {
+          question: "Are your services only for university admissions?",
+          answer:
+            "Not at all. We also help with career documents, personal branding, and interview preparation."
+        },
+        {
+          question: "What makes Amour Editorial different from others?",
+          answer:
+            "We are founded by graduates of top universities and understand the nuances of competitive admissions. We bring strategy and empathy to every story."
+        },
+        {
+          question: "Do you work with students from all countries?",
+          answer:
+            "Yes, our services are available globally. We have worked with students applying to universities in the US, UK, Canada, Europe, and more."
+        }
+      ].map((faq, index) => (
+        <div key={index} className="border-b pb-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">{faq.question}</h3>
+          <p className="text-gray-600">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* CTA Section */}
       <section className="py-20 bg-amber-600">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 text-center">
