@@ -64,16 +64,24 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/docs">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
+
+
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/about"
+              >
+
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gradient-to-br from-orange-200 via-white to-stone-100">
                   {components.map((component) => (
                     <ListItem
+                      className="border border-white/30 rounded-lg bg-orange-200/10 backdrop-blur-3xl shadow-md hover:shadow-lg hover:scale-105 ease-in-out transition-all duration-300 "
                       key={component.title}
                       title={component.title}
                       href={component.href}
@@ -84,43 +92,35 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
+
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/blog"
+              >
+
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+                <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                href="/contact"
+              >
+                Success Stories
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/contact">
                 Contact Us
               </NavigationMenuLink>
             </NavigationMenuItem>
-            {/* <NavigationMenuItem>
-              <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-4">
-                  <li>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleHelpIcon />
-                      Backlog
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleIcon />
-                      To Do
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href="#" className="flex-row items-center gap-2">
-                      <CircleCheckIcon />
-                      Done
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
     </div>
-  )
+  );
 }
 
 function ListItem({

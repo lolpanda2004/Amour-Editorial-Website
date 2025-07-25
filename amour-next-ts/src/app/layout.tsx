@@ -5,6 +5,8 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { NavigationMenuDemo as Navbar } from "@/components/Navbar";
 import Head from "next/head";
+import ClientLayout from "./ClientLayout";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,7 +67,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) { 
   return (
     <html lang="en">
       <Head>
@@ -76,8 +78,10 @@ export default function RootLayout({
       <body
         className={"font-[Raleway,sans-serif] antialiased"}
       >
-        <Navbar />
-        {children}
+        <ClientLayout>
+          <Navbar />
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
