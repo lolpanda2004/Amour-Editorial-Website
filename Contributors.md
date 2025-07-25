@@ -34,6 +34,8 @@ We gratefully acknowledge the contributions of these individuals to the Amour Ed
         ![GitHub](https://img.shields.io/badge/GitHub-YourUsername-blue?logo=github)
 
 
+
+
 ## How to Contribute
 
 We welcome contributions from the community! Here's how you can help:
