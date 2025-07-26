@@ -1,5 +1,7 @@
 // utils/emailService.js
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer'
+
+
 const path = require('path');
 require('dotenv').config();
 

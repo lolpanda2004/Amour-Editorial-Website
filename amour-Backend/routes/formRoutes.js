@@ -1,7 +1,8 @@
 // routes/formRoutes.js
-const express = require('express');
+import express from 'express'
+import multer from 'multer'
+
 const router = express.Router();
-const multer = require('multer');
 const path = require('path');
 const { handleContactForm, handleBookingForm } = require('../Controllers/formController');
 
