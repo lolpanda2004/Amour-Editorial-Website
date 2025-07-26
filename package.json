@@ -1,4 +1,9 @@
 {
+
+  "devDependencies": {
+    "@types/aos": "^3.0.7"
+  }
+
   "name": "amour-editorial-website",
   "version": "1.0.0",
   "description": "**Amour Editorials** is a professional platform that helps students and professionals craft compelling Statements of Purpose (SOPs), Letters of Recommendation (LORs), and other academic documents — turning their dreams into impactful stories.",
@@ -27,4 +32,5 @@
     "url": "https://github.com/lkshayb/Amour-Editorial-Website/issues"
   },
   "homepage": "https://github.com/lkshayb/Amour-Editorial-Website#readme"
+
 }
