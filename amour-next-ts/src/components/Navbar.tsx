@@ -17,38 +17,38 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Statement of Purpose",
-    href: "/services#sop",
+    href: "/docs/primitives/alert-dialog",
     description:
-      "Craft compelling SOPs that showcase your unique journey and aspirations for university admissions.",
+      "A statement of purpose is a document that outlines the purpose of a project or organization.",
   },
   {
     title: "Letter of Recommendation",
-    href: "/services#lor",
+    href: "/docs/primitives/hover-card",
     description:
-      "Professional LOR editing that highlights your strengths and achievements effectively.",
+      "A letter of recommendation is a document that recommends a person for a job or school.",
   },
   {
     title: "Personal Essays",
-    href: "/services#essays",
+    href: "/docs/primitives/progress",
     description:
-      "Develop powerful personal narratives that resonate with admissions committees.",
+      "A personal essay is a piece of writing that tells a story about a person's life.",
   },
   {
     title: "Cover Letters",
-    href: "/services#cover-letters",
-    description: "Create impactful cover letters that make you stand out to potential employers.",
+    href: "/docs/primitives/scroll-area",
+    description: "A cover letter is a letter that accompanies a resume when applying for a job.",
   },
   {
-    title: "Resume Review",
-    href: "/services#resume",
+    title: "Resume",
+    href: "/docs/primitives/tabs",
     description:
-      "Professional resume optimization to showcase your experience and skills effectively.",
+      "A resume is a document that summarizes a person's work experience, education, and skills.",
   },
   {
-    title: "Academic Editing",
-    href: "/services#academic",
+    title: "Transcripts",
+    href: "/docs/primitives/tooltip",
     description:
-    "Comprehensive editing services for academic papers, theses, and research documents.",
+    "A transcript is a document that records a person's academic history.",
   },
 ]
 
