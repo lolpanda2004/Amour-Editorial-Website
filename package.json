@@ -10,7 +10,7 @@
     "install": "npm run install::fe && npm run install::be",
     "dev": "npx concurrently \"npm run dev::fe\" \"npm run dev::be\"",
     "dev::fe": "npm run dev --prefix amour-next-ts",
-    "dev::be": "node amour-backend/index.js",
+    "dev::be": "node amour-Backend/index.js",
     "start": "npm run install && npm run dev"
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/lkshayb/Amour-Editorial-Website#readme",
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "concurrently": "^9.2.0"
   }
 }
