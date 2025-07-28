@@ -219,3 +219,64 @@
     flex-direction: column;
   }
 }
+
+/* Mobile menu animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.3s ease-out;
+}
+
+/* Enhanced mobile navigation */
+.mobile-nav-link {
+  @apply block w-full text-left px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors duration-200;
+}
+
+.mobile-dropdown-item {
+  @apply block px-6 py-2 text-sm text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition-colors duration-200;
+}
+
+/* Improved focus states for accessibility */
+.nav-focus:focus {
+  @apply outline-none ring-2 ring-amber-500 ring-offset-2;
+}
+
+/* Navbar backdrop blur effect */
+.navbar-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Mobile menu overlay */
+.mobile-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Prevent body scroll when mobile menu is open */
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
