@@ -170,15 +170,15 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 ### Core Team
 
 - 🧠 **Lathika D** - Founder & Creative Director  
-  [lathika@amoureditorial.com](mailto:lathika@amoureditorial.com)  
+  [lathika@amoureditorial.com](mailto:devanandlathika@gmail.com)  
   *Vision, content strategy, and brand direction*
 
 - 🧠 **Akshai Krishna A** - Reporting Manager & Co-Founder  
-  [akshai@amoureditorial.com](mailto:akshai@amoureditorial.com)  
+  [akshai@amoureditorial.com](mailto:akshaykrishna1983@gmail.com)  
   *Technical requirements, project management*
 
 - 🧠 **Suraksha M** - Social Media Manager  
-  [suraksha@amoureditorial.com](mailto:suraksha@amoureditorial.com)  
+  [suraksha@amoureditorial.com](mailto:surakshamh04@gmail.com)  
   *Content validation, social integration*
 
 ### Community Contributors
