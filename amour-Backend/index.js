@@ -1,19 +1,15 @@
-const express = require('express');
-const cors = require('cors');
-const errorHandler = require('./middleware/errorHandler');
+import dotenv from 'dotenv'
+import { connectDB } from './config/dbConfig.js'
+import { app } from './app.js'
 
-const app = express();
+dotenv.config({path : './.env'})
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Routes
-app.use('/api', require('./routes')); // Includes formRoutes, pageRoutes, testimonialRoutes, authRoutes
-
-// Error handling
-app.use(errorHandler);
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+connectDB()
+        .then(() => {
+            app.listen(8000 || process.env.PORT, () => {
+                console.log("App is listening")
+            })
+        })
+        .catch((error) => {
+            console.log('error connecting app',error)
+        })
