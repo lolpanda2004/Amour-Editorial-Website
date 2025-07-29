@@ -2,8 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -36,7 +34,8 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Cover Letters",
     href: "/docs/primitives/scroll-area",
-    description: "A cover letter is a letter that accompanies a resume when applying for a job.",
+    description:
+      "A cover letter is a letter that accompanies a resume when applying for a job.",
   },
   {
     title: "Resume",
@@ -48,43 +47,39 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Transcripts",
     href: "/docs/primitives/tooltip",
     description:
-    "A transcript is a document that records a person's academic history.",
+      "A transcript is a document that records a person's academic history.",
   },
 ]
 
 export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
   return (
     <div className={`flex justify-center w-full ${fontClass}`}>
-      <nav className="fixed-top top-0 left-0 z-50 w-full px-8 py-3 flex items-center justify-center rounded-4xl bg-transparent">
+      <nav className="fixed top-0 left-0 z-50 w-full px-8 py-3 flex items-center justify-center bg-white/70 backdrop-blur-md shadow-md rounded-b-xl">
         <NavigationMenu>
           <NavigationMenuList>
+
             <NavigationMenuItem>
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/about">
-
-
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/about"
-              >
-
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gradient-to-br from-orange-200 via-white to-stone-100">
+                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gradient-to-br from-orange-200 via-white to-stone-100 p-4 rounded-xl shadow-lg">
                   {components.map((component) => (
                     <ListItem
-                      className="border border-white/30 rounded-lg bg-orange-200/10 backdrop-blur-3xl shadow-md hover:shadow-lg hover:scale-105 ease-in-out transition-all duration-300 "
                       key={component.title}
                       title={component.title}
                       href={component.href}
+                      className="border border-white/30 rounded-lg bg-orange-200/10 backdrop-blur-3xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
                     >
                       {component.description}
                     </ListItem>
@@ -92,51 +87,51 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/blog">
-
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/blog"
-              >
-
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
-                <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                href="/contact"
-              >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/faq">
+                FAQ
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/success-stories">
                 Success Stories
               </NavigationMenuLink>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/contact">
                 Contact Us
               </NavigationMenuLink>
             </NavigationMenuItem>
+
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
     </div>
-  );
+  )
 }
 
 function ListItem({
   title,
   children,
   href,
+  className,
   ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+}: React.ComponentPropsWithoutRef<"li"> & { href: string; className?: string }) {
   return (
-    <li {...props}>
+    <li {...props} className={className}>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
+        <Link href={href} className="block p-3 space-y-1 rounded-md transition-colors hover:bg-orange-100">
+          <div className="text-sm font-semibold text-orange-900">{title}</div>
+          <p className="text-sm text-muted-foreground">{children}</p>
         </Link>
       </NavigationMenuLink>
     </li>
