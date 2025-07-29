@@ -1,26 +1,42 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { 
+  Playfair_Display, 
+  Cormorant_Garamond, 
+  Crimson_Text, 
+  Inter 
+} from "next/font/google";
 import "./globals.css";
 import { NavigationMenuDemo as Navbar } from "@/components/Navbar";
-import Head from "next/head";
 import ClientLayout from "./ClientLayout";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Theme fonts matching our CSS
+const playfairDisplay = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-heading", 
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
-const montserrat = Montserrat({
+const crimsonText = Crimson_Text({
+  variable: "--font-body",
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-ui",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -69,15 +85,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) { 
   return (
-    <html lang="en">
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-      </Head>
-      <body
-        className={"font-[Raleway,sans-serif] antialiased"}
-      >
+    <html lang="en" className={`${playfairDisplay.variable} ${cormorantGaramond.variable} ${crimsonText.variable} ${inter.variable}`}>
+      <body className="font-body antialiased bg-background text-foreground">
         <ClientLayout>
           <Navbar />
           {children}

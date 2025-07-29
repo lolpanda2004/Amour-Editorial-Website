@@ -2,7 +2,7 @@
 
   "devDependencies": {
     "@types/aos": "^3.0.7"
-  }
+  },
 
   "name": "amour-editorial-website",
   "version": "1.0.0",
