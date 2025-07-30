@@ -77,11 +77,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm" 
+      <div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-
       <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out">
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <Link href="/" onClick={onClose}>
@@ -131,7 +130,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <Link href="/contact" onClick={onClose} className="px-6 py-4 text-gray-700 hover:bg-amber-50 hover:text-amber-600 font-medium transition-colors border-b border-gray-100">Contact Us</Link>
 
           <div className="px-6 py-4">
-            <Link href="/booking" onClick={onClose} className="block w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105">Book Consultation</Link>
+            <Link href="/booking" onClick={onClose} className="block w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105">
+              Book Consultation
+            </Link>
           </div>
         </nav>
       </div>
