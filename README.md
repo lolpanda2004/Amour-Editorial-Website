@@ -142,6 +142,7 @@ Amour-Editorial-Website/
 📎 [Click to view the complete project requirement document](https://drive.google.com/drive/folders/1UKhRycAPGKAMnXEQuGMF5JSSEaz0_awR?usp=sharing)
 
 ---
+![Amour Website Design ](AmourWebsite.png)
 
 ## 🤝 Contributing
 
