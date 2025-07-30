@@ -19,8 +19,7 @@
 
 ---
 
-## 🧠 About Us
-
+## 🧠 About Us 
 Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission to help aspirants express their journeys with honesty and power through SOPs, LORs, and other impactful narratives. Backed by years of experience and acceptances to top global universities, the team ensures every story echoes across admission panels worldwide.
 
 ---
@@ -171,15 +170,15 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 ### Core Team
 
 - 🧠 **Lathika D** - Founder & Creative Director  
-  [lathika@amoureditorial.com](mailto:lathika@amoureditorial.com)  
+  [lathika@amoureditorial.com](mailto:devanandlathika@gmail.com)  
   *Vision, content strategy, and brand direction*
 
 - 🧠 **Akshai Krishna A** - Reporting Manager & Co-Founder  
-  [akshai@amoureditorial.com](mailto:akshai@amoureditorial.com)  
+  [akshai@amoureditorial.com](mailto:akshaykrishna1983@gmail.com)  
   *Technical requirements, project management*
 
 - 🧠 **Suraksha M** - Social Media Manager  
-  [suraksha@amoureditorial.com](mailto:suraksha@amoureditorial.com)  
+  [suraksha@amoureditorial.com](mailto:surakshamh04@gmail.com)  
   *Content validation, social integration*
 
 ### Community Contributors
@@ -222,3 +221,10 @@ _Your contributions will be reviewed and appreciated! Let’s build something im
 | Booking Flow        | ![Booking](images/booking.png)           |
 | Testimonials        | ![Testimonials](images/testimonials.png) |
 | Responsive View     | ![Mobile View](images/mobile-view.png)   |
+
+
+<p align="center">
+  <a href="#top" style="font-size: 18px; padding: 8px 16px; display: inline-block; border: 1px solid #ccc; border-radius: 6px; text-decoration: none;">
+    ⬆️ Back to Top
+  </a>
+</p>
