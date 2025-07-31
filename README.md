@@ -154,7 +154,45 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 2. **Clone** to local  
 3. **Create a new branch** for your feature/bug  
 4. **Commit changes** with meaningful messages  
-5. **Push** and create a Pull Request  
+5. **Push** and create a Pull Request 
+6. **Raise a issue**
+    We appreciate you taking the time to improve the project! Here’s how to raise an issue effectively:
+
+    **Check for Existing Issues**
+      -Browse through existing issues to avoid duplicates.
+
+    **Use a Clear Title**
+      -Make your title short but descriptive (e.g., "Navbar overlaps logo on mobile").
+
+    **Describe the Issue in Detail**
+      -Explain what the issue is and why it matters.
+      -Mention the expected behavior vs. actual behavior.
+      -Include steps to reproduce the problem (if it's a bug).
+
+    **Attach Relevant Media (if applicable)**
+      -Screenshots, GIFs, or terminal logs help speed up understanding.
+
+    **Use Appropriate Labels**
+      -Add labels like bug, feature, enhancement, good first issue, etc.
+
+    **Be Respectful and Constructive**
+      -Keep communication kind and focused on solutions.
+7. **Create a Pull Request**
+    Go to your forked repo on GitHub.
+    You'll see a prompt to "Compare & pull request".
+
+    Click it.
+
+    Fill in the PR title and description:
+    ✅ Title: docs: add contribution guidelines for issues and PRs
+    ✅ Description: Briefly explain what you did. 
+    Example:
+    This PR adds a new section to the README with clear steps on how contributors can raise issues and submit PRs, as requested in Issue #<issue-number>.
+
+    Submit the PR.
+8. **Comment on the Issue**
+    If the task was assigned via an Issue, comment something like:
+    I have created a PR that addresses this. Please review it here: [#PR-Link]
 
 ### Contribution Guidelines
 
