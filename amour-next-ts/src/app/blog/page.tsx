@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+
 export default function BlogPage() {
   const featuredPost = {
     title: "The Ultimate Guide to Writing a Compelling Statement of Purpose in 2024",
@@ -77,6 +78,8 @@ export default function BlogPage() {
               Expert insights, tips, and strategies to help you succeed in your academic journey. Stay updated with the
               latest trends in application writing.
             </p>
+
+            {/* Search and Filter */}
             <div className="max-w-2xl mx-auto">
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="flex-1 relative">
