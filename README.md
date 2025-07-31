@@ -223,6 +223,8 @@ _Your contributions will be reviewed and appreciated! Let’s build something im
 | Testimonials        | ![Testimonials](images/testimonials.png) |
 | Responsive View     | ![Mobile View](images/mobile-view.png)   |
 
+## License  
+This project is licensed under the [MIT License](LICENSE).
 
 <p align="center">
   <a href="#top" style="font-size: 18px; padding: 8px 16px; display: inline-block; border: 1px solid #ccc; border-radius: 6px; text-decoration: none;">
