@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components copy/ui/card";
+import { Button } from "@/components copy/ui/button";
 import {
   Calendar,
   User,
@@ -9,10 +8,8 @@ import {
   Search,
   Filter,
   BookOpen,
-  TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
-
 
 export default function BlogPage() {
   const featuredPost = {
