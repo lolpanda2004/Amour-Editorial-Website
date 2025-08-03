@@ -8,6 +8,7 @@ import {
 	Clock,
 	Shield,
 } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function AboutPage() {
@@ -171,10 +172,12 @@ export default function AboutPage() {
 							</p>
 						</div>
 						<div className='animate-slide-up stagger-1'>
-							<img
-								src='/team-image.jpg'
+							<Image
+								data-aos='fade-up'
+								src='/team-image.png'
 								alt='Amour Editorial Team'
 								className='rounded-lg shadow-lg w-full h-auto hover-lift'
+								priority
 							/>
 						</div>
 					</div>
@@ -189,7 +192,7 @@ export default function AboutPage() {
 							Why Choose Us?
 						</h2>
 						<p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-							Here's what sets us apart in helping you achieve
+							Here&apos;s what sets us apart in helping you achieve
 							your academic and professional goals.
 						</p>
 					</div>
