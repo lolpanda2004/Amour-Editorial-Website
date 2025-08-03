@@ -45,7 +45,7 @@ export default function Home() {
               >
                 <Link
                   href="/booking"
-                  className="btn-primary hover-lift no-underline"
+                  className="btn-primary hover-lift no-underline flex items-center gap-2"
                 >
                   Book a Consultation
                   <ArrowRight className="w-4 h-4" />
@@ -374,7 +374,7 @@ export default function Home() {
           >
             <Link
               href="/booking"
-              className="btn-secondary hover-lift no-underline"
+              className="btn-secondary hover-lift no-underline flex items-center gap-2"
             >
               Book a Consultation
               <ArrowRight className="w-4 h-4" />
