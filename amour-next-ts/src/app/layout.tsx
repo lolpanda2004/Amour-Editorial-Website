@@ -1,17 +1,16 @@
-// src/app/layout.tsx
-
 import type { Metadata } from "next";
-import { 
-  Playfair_Display, 
-  Cormorant_Garamond, 
-  Crimson_Text, 
-  Inter 
+import {
+  Playfair_Display,
+  Cormorant_Garamond,
+  Crimson_Text,
+  Inter,
 } from "next/font/google";
 import "./globals.css";
 import { NavigationMenuDemo as Navbar } from "@/components/Navbar";
 import ClientLayout from "./ClientLayout";
+import Footer from "@/components/Footer";
 
-// Theme fonts matching our CSS
+// Fonts
 const playfairDisplay = Playfair_Display({
   variable: "--font-display",
   subsets: ["latin"],
@@ -19,7 +18,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-heading", 
+  variable: "--font-heading",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -81,15 +80,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) { 
+}) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${cormorantGaramond.variable} ${crimsonText.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${playfairDisplay.variable} ${cormorantGaramond.variable} ${crimsonText.variable} ${inter.variable}`}
+    >
       <body className="font-body antialiased bg-background text-foreground">
         <ClientLayout>
           <Navbar />
           {children}
+          <Footer />
         </ClientLayout>
       </body>
     </html>
