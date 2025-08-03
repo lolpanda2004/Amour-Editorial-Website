@@ -26,8 +26,6 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 
 ## 🌟 Features
 
-https://amour-editorial-website-4p915oz2c-lolpanda2004s-projects.vercel.app/
-
 - 🖥️ Fully responsive UI with 3D effects and animations
 - 📄 Secure form submissions and email integrations
 - 📅 Calendly booking support
@@ -243,7 +241,7 @@ We welcome contributions from developers, designers, writers, and testers! 💜
 
 ## 📬 Connect with Us
 
-- 🌐 [Official Website](https://amour-editorial-website.vercel.app/)
+- 🌐 [Official Website]([https://amour-editorial-website.vercel.app/](https://amour-editorial-website-4p915oz2c-lolpanda2004s-projects.vercel.app/))
 - 💼 [LinkedIn](https://www.linkedin.com/company/amour-editorial/)
 - 📧 Email: contact@amour-editorial.com
 
