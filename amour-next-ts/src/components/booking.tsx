@@ -85,7 +85,7 @@ export function Booking() {
             Book Your <span className="gradient-text">Free Consultation</span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Ready to get started? Fill out the form below and we'll schedule a{" "}
+            Ready to get started? Fill out the form below and we&apos;ll schedule a{" "}
             <span className="font-semibold gradient-text-alt">personalized consultation</span> to discuss your needs and
             create your success plan.
           </p>
@@ -204,7 +204,7 @@ export function Booking() {
                     <label htmlFor="booking-service" className="block text-sm font-semibold text-gray-700">
                       Service Needed *
                     </label>
-                    <Select onValueChange={(value) => setFormData((prev) => ({ ...prev, service: value }))}>
+                    <Select onValueChange={(value: string) => setFormData((prev) => ({ ...prev, service: value }))}>
                       <SelectTrigger className="w-full border-2 border-gray-200 focus:border-primary transition-colors duration-300 rounded-xl py-3">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
@@ -221,7 +221,7 @@ export function Booking() {
                     <label htmlFor="booking-urgency" className="block text-sm font-semibold text-gray-700">
                       Timeline *
                     </label>
-                    <Select onValueChange={(value) => setFormData((prev) => ({ ...prev, urgency: value }))}>
+                    <Select onValueChange={(value: string) => setFormData((prev) => ({ ...prev, urgency: value }))}>
                       <SelectTrigger className="w-full border-2 border-gray-200 focus:border-primary transition-colors duration-300 rounded-xl py-3">
                         <SelectValue placeholder="Select timeline" />
                       </SelectTrigger>
@@ -356,7 +356,7 @@ export function Booking() {
               </Button>
 
               <p className="text-sm text-gray-500 text-center leading-relaxed">
-                By submitting this form, you agree to our terms of service and privacy policy. We'll contact you within
+                By submitting this form, you agree to our terms of service and privacy policy. We&apos;ll contact you within
                 24 hours to schedule your consultation. No spam, ever.
               </p>
             </form>
@@ -380,7 +380,7 @@ export function Booking() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3 font-playfair">Quick Response</h3>
             <p className="text-gray-600 leading-relaxed">
-              We'll get back to you within 24 hours to schedule your session at a time that works for you.
+              We&apos;ll get back to you within 24 hours to schedule your session at a time that works for you.
             </p>
           </div>
           <div className="text-center group">
