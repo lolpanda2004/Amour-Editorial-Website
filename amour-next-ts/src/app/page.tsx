@@ -45,7 +45,7 @@ export default function Home() {
               >
                 <Link
                   href="/booking"
-                  className="btn-primary hover-lift no-underline"
+                  className="btn-primary hover-lift no-underline flex items-center gap-2"
                 >
                   Book a Consultation
                   <ArrowRight className="w-4 h-4" />
@@ -61,7 +61,7 @@ export default function Home() {
             <div className="relative aspect-square">
               <Image
                 data-aos="fade-up"
-                src="/hero-image.jpg" // Replace with your actual hero image
+                src="/hero-image.png" // Replace with your actual hero image
                 alt="Students celebrating university acceptance"
                 fill
                 className="rounded-xl object-cover shadow-elegant hover-lift"
@@ -182,7 +182,7 @@ export default function Home() {
         <div className="relative aspect-[4/3]">
           <Image
             data-aos="fade-up"
-            src="/team-image.jpg"
+            src="/team-image.png"
             alt="Amour Editorial team"
             fill
             className="rounded-xl object-cover shadow-lg"
@@ -374,7 +374,7 @@ export default function Home() {
           >
             <Link
               href="/booking"
-              className="btn-secondary hover-lift no-underline"
+              className="btn-secondary hover-lift no-underline flex items-center gap-2"
             >
               Book a Consultation
               <ArrowRight className="w-4 h-4" />
