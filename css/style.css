@@ -1,3 +1,16 @@
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -27,10 +40,15 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block; 
 }
 
 nav ul li a:hover {
   color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+  transform: scale(1.1);
+  animation: pulse 1s infinite;
 }
 
 main {
