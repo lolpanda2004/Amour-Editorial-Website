@@ -175,11 +175,12 @@ export default function AboutPage() {
 							<Image
 								data-aos='fade-up'
 								src='/team-image.png'
-								alt='Amour Editorial Team'
-								width={600}
-								height={400}
-								className='rounded-lg shadow-lg w-full h-auto hover-lift'
-								priority
+							alt='Amour Editorial Team'
+width={600}
+height={400}
+className='rounded-lg shadow-lg w-full h-auto hover-lift'
+priority
+
 							/>
 						</div>
 					</div>

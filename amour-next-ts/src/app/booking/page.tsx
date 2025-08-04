@@ -23,7 +23,7 @@ export default function BookingPage() {
         </div>
 
         <p className="text-sm text-gray-500 mt-6">
-          Can't find a suitable time?{" "}
+          Can&apos;t find a suitable time?{" "}
           <a href="/contact" className="underline text-primary">Contact us</a> for custom bookings.
         </p>
       </div>
