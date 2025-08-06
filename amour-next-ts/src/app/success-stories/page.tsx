@@ -30,11 +30,11 @@ const stories = [
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="max-w-7xl mx-auto py-16 px-6 sm:px-12 lg:px-24 bg-gradient-to-b from-gray-50 to-white">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6">
+    <main className="max-w-7xl mx-auto py-16 px-6 sm:px-12 lg:px-24 bg-background dark:bg-black">
+      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6 text-foreground">
         Success <span className="text-amber-600">Stories</span>
       </h1>
-      <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Read the journeys of real students who turned dreams into offers from top universities.
       </p>
 
@@ -42,17 +42,17 @@ export default function SuccessStoriesPage() {
         {stories.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow hover:-translate-y-1 border border-gray-100 hover:border-amber-200"
+            className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition-shadow hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-amber-200"
           >
-            <h3 className="font-semibold text-gray-900 text-center text-lg mb-1">{item.name}</h3>
-            <p className="text-gray-500 text-center mb-4">{item.program}</p>
-            <p className="italic text-gray-700 mb-2">{item.dream}</p>
-            <p className="text-gray-600 mb-2">{item.background}</p>
-            <p className="text-gray-600 mb-2">
-              <span className="font-semibold text-gray-800">How we helped:</span> {item.howWeHelped}
+            <h3 className="font-semibold text-gray-900 dark:text-white text-center text-lg mb-1">{item.name}</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-center mb-4">{item.program}</p>
+            <p className="italic text-gray-700 dark:text-gray-300 mb-2">{item.dream}</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">{item.background}</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              <span className="font-semibold text-gray-800 dark:text-white">How we helped:</span> {item.howWeHelped}
             </p>
-            <p className="text-gray-600">
-              <span className="font-semibold text-gray-800">Outcome:</span> {item.outcome}
+            <p className="text-gray-600 dark:text-gray-400">
+              <span className="font-semibold text-gray-800 dark:text-white">Outcome:</span> {item.outcome}
             </p>
           </div>
         ))}
@@ -61,7 +61,7 @@ export default function SuccessStoriesPage() {
       <div className="text-center mt-12">
         <Link
           href="/booking"
-          className="inline-flex items-center bg-amber-600 text-white hover:bg-amber-700 font-medium gap-2 px-6 py-3 rounded-full shadow hover:shadow-md transition"
+          className="inline-flex items-center bg-amber-600 dark:bg-red-600 text-white hover:bg-amber-700 dark:hover:bg-red-700 font-medium gap-2 px-6 py-3 rounded-full shadow hover:shadow-md transition"
         >
           Start your journey
         </Link>

@@ -199,7 +199,7 @@ priority
 							your academic and professional goals.
 						</p>
 					</div>
-					<ul className='list-disc pl-6 text-gray-700 space-y-3 max-w-3xl mx-auto text-lg'>
+					<ul className='list-disc pl-6 space-y-3 max-w-3xl mx-auto text-lg'>
 						<li>
 							Personalized, one-on-one guidance for every client
 						</li>
@@ -368,10 +368,10 @@ priority
 							>
 								<div className='bg-white rounded-lg shadow-sm p-8 hover-lift'>
 									<achievement.icon className='h-12 w-12 text-amber-600 mx-auto mb-4' />
-									<div className='text-3xl font-bold text-gray-900 mb-2'>
+										<div className='text-3xl font-bold  mb-2'>
 										{achievement.number}
 									</div>
-									<div className='text-gray-600 font-medium'>
+									<div className=' font-medium'>
 										{achievement.label}
 									</div>
 								</div>
@@ -387,7 +387,7 @@ priority
 					<h2 className='text-3xl font-bold text-gray-900 mb-8'>
 						Our Mission
 					</h2>
-					<blockquote className='text-xl text-gray-600 leading-relaxed italic mb-8'>
+					<blockquote className='text-xl  leading-relaxed italic mb-8'>
 						"To empower students and professionals by transforming
 						their unique experiences into compelling narratives that
 						open doors to their dream opportunities. We believe that
@@ -401,10 +401,10 @@ priority
 							className='w-12 h-12 rounded-full'
 						/>
 						<div className='text-left'>
-							<div className='font-semibold text-gray-900'>
+							<div className='font-semibold'>
 								Akshai & Lathika
 							</div>
-							<div className='text-sm text-gray-600'>
+							<div className='text-sm'>
 								Co-Founders
 							</div>
 						</div>
