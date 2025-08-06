@@ -16,24 +16,24 @@ export default function Home() {
     });
   }, []);
   return (
-    <div className="min-h-screen bg-warm">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section-hero">
+      <section className="section-hero bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1
-                className="hero-title"
+                className="hero-title text-foreground"
                 data-aos="fade-up"
               >
                 Your Story,{" "}
-                <span className="text-gradient" data-aos="fade-up">
+                <span className="text-primary" data-aos="fade-up">
                   Perfectly Told
                 </span>
               </h1>
               <p
                 data-aos="fade-up"
-                className="hero-subtitle"
+                className="hero-subtitle text-muted-foreground"
               >
                 Craft compelling SOPs, LORs, and personal narratives that open
                 doors to the world&#39;s top universities and career
@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <div className="section-alt">
+      <div className="section-alt bg-muted">
         <p
           data-aos="fade-up"
           className="text-center text-muted-foreground mb-8 text-lg font-semibold font-ui"
@@ -83,7 +83,7 @@ export default function Home() {
       </div>
 
       {/* Services Preview */}
-      <section className="section">
+      <section className="section bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
           <div className="text-center mb-16">
             <h2
@@ -91,7 +91,7 @@ export default function Home() {
               className="text-3xl sm:text-4xl font-bold text-foreground mb-4 font-display"
             >
               Our{" "}
-              <span data-aos="fade-up" className="text-gradient">
+              <span data-aos="fade-up" className="text-primary">
                 Services
               </span>
             </h2>
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
       </section>
       {/* About Preview */}
-      <section className="section-alt">
+      <section className="section-alt bg-muted">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="relative aspect-[4/3]">
@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-6 sm:px-12 lg:px-24">
+      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
         <h2
@@ -354,7 +354,7 @@ export default function Home() {
   </div>
 </section>
       {/* CTA Section */}
-      <section className="section" style={{ background: 'var(--gradient-primary)' }}>
+      <section className="section bg-primary" style={{ background: 'var(--primary)' }}>
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 text-center">
           <h2
             data-aos="fade-up"
@@ -374,7 +374,7 @@ export default function Home() {
           >
             <Link
               href="/booking"
-              className="btn-secondary hover-lift no-underline flex items-center gap-2"
+              className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors no-underline flex items-center gap-2 justify-center"
             >
               Book a Consultation
               <ArrowRight className="w-4 h-4" />
@@ -382,7 +382,7 @@ export default function Home() {
             <Link
               data-aos="fade-up"
               href="/contact"
-              className="btn-outline text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary no-underline"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all no-underline"
             >
               Contact Us
             </Link>

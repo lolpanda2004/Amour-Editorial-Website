@@ -9,6 +9,7 @@ import "./globals.css";
 import { NavigationMenuDemo as Navbar } from "@/components/Navbar";
 import ClientLayout from "./ClientLayout";
 import Footer from "@/components/Footer";
+import { ThemeScript } from "@/components/theme-script";
 
 // Fonts
 const playfairDisplay = Playfair_Display({
@@ -87,7 +88,11 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfairDisplay.variable} ${cormorantGaramond.variable} ${crimsonText.variable} ${inter.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <ThemeScript />
+      </head>
       <body className="font-body antialiased bg-background text-foreground">
         <ClientLayout>
           <Navbar />

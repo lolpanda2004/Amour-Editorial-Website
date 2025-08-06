@@ -399,9 +399,9 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="space-y-8" data-aos="fade-left" data-aos-delay="300">
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+              <div className="bg-white rounded-2xl p-8 border border-amber-100 dark:border-gray-700">
+                <h2 className="text-2xl font-bold text-gray-900  mb-6">Let's Connect</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                   Ready to transform your academic journey? Our expert team is here to help you craft 
                   compelling stories that open doors to your dream opportunities.
                 </p>
@@ -410,16 +410,16 @@ export default function Contact() {
                   {contactInfo.map((info, index) => (
                     <div 
                       key={info.title}
-                      className="bg-white rounded-xl p-6 shadow-sm border border-white/50 hover:shadow-md transition-shadow duration-300"
+                      className="bg-white dark:bg-black rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
                       data-aos="fade-up"
                       data-aos-delay={400 + index * 100}
                     >
                       <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${info.color} mb-4`}>
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{info.title}</h3>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-sm text-gray-600">{detail}</p>
+                        <p key={idx} className="text-sm text-gray-600 dark:text-gray-300">{detail}</p>
                       ))}
                     </div>
                   ))}
@@ -428,7 +428,7 @@ export default function Contact() {
 
               {/* CTA Section */}
               <div 
-                className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 text-white text-center"
+                className="bg-gradient-to-r from-amber-600 to-orange-600 dark:bg-gradient-to-r dark:from-red-600 dark:to-red-700 rounded-2xl p-8 text-white text-center"
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
@@ -438,7 +438,7 @@ export default function Contact() {
                 </p>
                 <a
                   href="/booking"
-                  className="inline-flex items-center space-x-2 bg-white text-amber-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 bg-white text-amber-600 dark:text-red-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-200 transition-colors duration-300"
                 >
                   <span>Book Consultation</span>
                   <Send className="w-4 h-4" />
