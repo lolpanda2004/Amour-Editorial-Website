@@ -117,40 +117,66 @@
 }
 
 .dark {
-  /* Dark Theme - Sophisticated Evening Study */
-  --background: var(--burgundy-950);
-  --foreground: var(--beige-50);
+  /* Dark Theme - True Black & White */
+  --background: #000000;  /* Pure black background */
+  --foreground: #ffffff;  /* Pure white text */
   
-  --card: var(--burgundy-900);
-  --card-foreground: var(--beige-100);
+  --card: #111111;  /* Very dark gray for cards */
+  --card-foreground: #ffffff;  /* White text on cards */
   
-  --popover: var(--burgundy-900);
-  --popover-foreground: var(--beige-100);
+  --popover: #111111;  /* Dark popover background */
+  --popover-foreground: #ffffff;  /* White popover text */
   
-  --primary: var(--burgundy-400);  /* Lighter burgundy for dark mode */
-  --primary-foreground: var(--burgundy-950);
+  --primary: #dc2626;  /* Red as primary in dark mode */
+  --primary-foreground: #ffffff;  /* White text on red buttons */
   
-  --secondary: var(--burgundy-800);
-  --secondary-foreground: var(--beige-200);
+  --secondary: #222222;  /* Dark secondary */
+  --secondary-foreground: #ffffff;  /* White secondary text */
   
-  --muted: var(--burgundy-800);
-  --muted-foreground: var(--beige-400);
+  --muted: #1a1a1a;  /* Slightly lighter black for muted elements */
+  --muted-foreground: #cccccc;  /* Light gray for muted text */
   
-  --accent: var(--gold-300);  /* Bright gold for dark mode */
-  --accent-foreground: var(--burgundy-900);
+  --accent: #ffffff;  /* White accent */
+  --accent-foreground: #000000;  /* Black accent text */
   
-  --destructive: #ef4444;
-  --destructive-foreground: var(--beige-50);
+  --destructive: #ff4444;  /* Bright red for destructive actions */
+  --destructive-foreground: #ffffff;  /* White text */
   
-  --border: var(--burgundy-700);
-  --input: var(--burgundy-800);
-  --ring: var(--burgundy-400);
+  --border: #333333;  /* Dark gray borders */
+  --input: #1a1a1a;  /* Dark input backgrounds */
+  --ring: #ffffff;  /* White focus rings */
   
-  --chart-1: var(--burgundy-400);
-  --chart-2: var(--gold-300);
-  --chart-3: var(--sage-400);
-  --chart-4: var(--beige-300);
-  --chart-5: var(--burgundy-300);
+  /* Dark mode gradients */
+  --gradient-primary: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);  /* Keep red gradient in dark mode */
+  
+  --chart-1: #ffffff;
+  --chart-2: #cccccc;
+  --chart-3: #999999;
+  --chart-4: #666666;
+  --chart-5: #444444;
+}
+
+/* Additional dark mode overrides */
+.dark {
+  background-color: #000000 !important;
+}
+
+.dark body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.dark .bg-white {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.dark section {
+  background-color: var(--background) !important;
+}
+
+.dark .section {
+  background-color: var(--background) !important;
 }
 
 @layer base {
@@ -296,7 +322,7 @@
   /* Trustworthy Button Components */
   .btn-primary {
     background: var(--gradient-primary);
-    color: var(--primary-foreground);
+    color: #ffffff;  /* Force white text for better contrast */
     padding: 0.875rem 2rem;
     border-radius: var(--radius);
     font-weight: 600;
@@ -307,6 +333,12 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+  }
+  
+  /* Force red background in dark mode */
+  .dark .btn-primary {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+    color: #ffffff !important;
   }
   
   .btn-primary:hover {
@@ -486,7 +518,7 @@
   
   .section-hero {
     padding: 6rem 0 8rem 0;
-    background: var(--gradient-warm);
+    background: var(--background);
     position: relative;
     overflow: hidden;
   }
@@ -498,7 +530,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8d7c3' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    background: transparent;
     opacity: 0.5;
     pointer-events: none;
   }
@@ -626,7 +658,7 @@
   }
   
   .bg-warm {
-    background: var(--gradient-warm);
+    background: var(--background);
   }
   
   .bg-elegant {
@@ -723,6 +755,309 @@
   .border-primary-foreground {
     border-color: var(--primary-foreground);
   }
+}
+
+/* Toolbar Dark Mode Styling - Fixes Issue #158 */
+@layer components {
+  /* Toolbar Elements - Font Controls, Buttons, Selects, etc. */
+  .toolbar {
+    background: var(--background);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    transition: all 0.3s ease;
+  }
+  
+  .toolbar-button {
+    background: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .toolbar-button:hover {
+    background: var(--muted);
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .toolbar-button.active {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+  }
+  
+  /* Font Name/Family Selector */
+  .font-family-select,
+  .font-name-select {
+    background: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-family: var(--font-ui);
+    min-width: 120px;
+    transition: all 0.2s ease;
+  }
+  
+  .font-family-select:focus,
+  .font-name-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+  
+  /* Font Size Selector */
+  .font-size-select {
+    background: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-family: var(--font-ui);
+    min-width: 80px;
+    transition: all 0.2s ease;
+  }
+  
+  .font-size-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+  
+  /* Text Formatting Buttons */
+  .format-button {
+    background: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    min-height: 2rem;
+  }
+  
+  .format-button:hover {
+    background: var(--muted);
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+  }
+  
+  .format-button.active {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+  }
+  
+  /* Bold Button */
+  .bold-button {
+    font-weight: bold;
+  }
+  
+  /* Italic Button */
+  .italic-button {
+    font-style: italic;
+  }
+  
+  /* Underline Button */
+  .underline-button {
+    text-decoration: underline;
+  }
+  
+  /* Toolbar Group Styling */
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: var(--radius);
+    background: var(--muted);
+    border: 1px solid var(--border);
+  }
+  
+  /* Toolbar Label Styling */
+  .toolbar-label {
+    color: var(--foreground);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+  
+  /* Create New Node Button - Specific Fix for Issue #158 */
+  .create-new-node-button {
+    background: var(--primary);
+    color: var(--primary-foreground) !important;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: calc(var(--radius) - 0.25rem);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .create-new-node-button:hover {
+    background: var(--primary);
+    color: var(--primary-foreground) !important;
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Toolbar Dropdown Styling */
+  .toolbar-dropdown {
+    background: var(--popover);
+    color: var(--popover-foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-medium);
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  /* Dark Mode Toggle Button Overrides */
+  [data-radix-popper-content-wrapper] {
+    background: var(--popover) !important;
+    color: var(--popover-foreground) !important;
+    border: 1px solid var(--border) !important;
+  }
+  
+  /* Radix Dropdown Menu Content */
+  .dark [data-radix-popper-content-wrapper] {
+    background: var(--popover) !important;
+    color: var(--popover-foreground) !important;
+  }
+  
+  .toolbar-dropdown-item {
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    color: var(--foreground);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .toolbar-dropdown-item:hover {
+    background: var(--muted);
+    color: var(--primary);
+  }
+  
+  .toolbar-dropdown-item.selected {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+/* Specific Dark Mode Fixes for Common Toolbar Elements */
+.dark .toolbar-button,
+.dark .font-family-select,
+.dark .font-name-select,
+.dark .font-size-select,
+.dark .format-button {
+  color: #ffffff !important;
+  background: #111111 !important;
+  border-color: #333333 !important;
+}
+
+.dark .toolbar-button:hover,
+.dark .format-button:hover {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.dark .toolbar-button.active,
+.dark .format-button.active {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.dark .toolbar-label {
+  color: #ffffff !important;
+}
+
+.dark .create-new-node-button {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.dark .create-new-node-button:hover {
+  color: #000000 !important;
+  background: #cccccc !important;
+}
+
+/* Global Dark Mode Text and Background Overrides */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff !important;
+}
+
+.dark p {
+  color: #cccccc !important;
+}
+
+.dark a {
+  color: #ffffff !important;
+}
+
+.dark a:hover {
+  color: #cccccc !important;
+}
+
+/* Dark mode button styling */
+.dark button {
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+.dark button:hover {
+  background-color: #1a1a1a !important;
+}
+
+/* Dark mode input styling */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
 }
 
 
@@ -937,16 +1272,39 @@
 
 /* Enhanced mobile navigation */
 .mobile-nav-link {
-  @apply block w-full text-left px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors duration-200;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--muted-foreground);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  background: var(--muted);
+  color: var(--primary);
 }
 
 .mobile-dropdown-item {
-  @apply block px-6 py-2 text-sm text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition-colors duration-200;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-item:hover {
+  background: var(--muted);
+  color: var(--primary);
 }
 
 /* Improved focus states for accessibility */
 .nav-focus:focus {
-  @apply outline-none ring-2 ring-amber-500 ring-offset-2;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+  border-radius: 0.25rem;
 }
 
 /* Navbar backdrop blur effect */
