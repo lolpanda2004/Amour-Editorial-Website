@@ -61,7 +61,7 @@ export function SimpleDarkModeToggle() {
       variant="outline"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative bg-background border-border hover:bg-muted dark:bg-background dark:border-border dark:hover:bg-muted transition-all duration-200"
+      className="relative bg-background border-border hover:bg-muted dark:bg-background dark:border-border dark:hover:bg-muted transition-all duration-200 cursor-pointer"
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <Sun className={`h-[1.2rem] w-[1.2rem] transition-all ${isDark ? 'rotate-90 scale-0' : 'rotate-0 scale-100'} text-foreground`} />
