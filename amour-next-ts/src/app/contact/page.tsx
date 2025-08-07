@@ -221,7 +221,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen overflow-x-hidden">
       <Toast 
         message={toast.message}
         type={toast.type}
@@ -241,7 +241,7 @@ export default function Contact() {
               <span className="text-amber-600">Touch</span>
             </h1>
             <p 
-              className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-lg sm:text-xl max-w-3xl mx-auto"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -401,7 +401,7 @@ export default function Contact() {
             <div className="space-y-8" data-aos="fade-left" data-aos-delay="300">
               <div className="bg-white rounded-2xl p-8 border border-amber-100 dark:border-gray-700">
                 <h2 className="text-2xl font-bold text-gray-900  mb-6">Let's Connect</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                <p className=" mb-8 leading-relaxed">
                   Ready to transform your academic journey? Our expert team is here to help you craft 
                   compelling stories that open doors to your dream opportunities.
                 </p>
