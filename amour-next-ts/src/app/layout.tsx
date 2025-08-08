@@ -58,11 +58,11 @@ export const metadata: Metadata = {
     title: "Amour Editorial",
     description:
       "SOPs and LORs that resonate with authenticity. Created with care by expert editors.",
-    url: "https://your-deployment-url.com",
+    url: "https://amour-editorial-website.vercel.app",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/hero-image.png",
         width: 1200,
         height: 630,
         alt: "Amour Editorial",
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
     title: "Amour Editorial",
     description:
       "SOP and LOR editing experts. Helping you tell your story with clarity and emotion.",
-    images: ["/og-image.jpg"],
+    images: ["/hero-image.png"],
   },
-  metadataBase: new URL("https://your-deployment-url.com"),
+  metadataBase: new URL("https://amourr-editorial-website.vercel.app"),
 };
 
 export default function RootLayout({

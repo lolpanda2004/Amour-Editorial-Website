@@ -3,6 +3,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react"
 
 import {
@@ -60,6 +61,7 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isOpen) {
@@ -98,13 +100,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         <nav className="flex flex-col py-4">
-          <Link href="/" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Home</Link>
-          <Link href="/about" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">About</Link>
+          <Link href="/" onClick={onClose} className={`px-6 py-4 font-medium transition-colors border-b border-border relative ${pathname === "/" ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}>Home</Link>
+          <Link href="/about" onClick={onClose} className={`px-6 py-4 font-medium transition-colors border-b border-border relative ${pathname === "/about" ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}>About</Link>
 
           <div className="border-b border-border">
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="w-full px-6 py-4 text-left text-foreground hover:bg-muted hover:text-primary font-medium transition-colors flex items-center justify-between"
+              className={`w-full px-6 py-4 text-left font-medium transition-colors flex items-center justify-between relative ${pathname.startsWith('/services') ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}
             >
               Services
               {isServicesOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -116,7 +118,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     key={component.title}
                     href={component.href}
                     onClick={onClose}
-                    className="block px-8 py-3 text-sm text-muted-foreground hover:bg-muted hover:text-primary transition-colors"
+                    className={`block px-8 py-3 text-sm transition-colors ${pathname === component.href ? "text-primary bg-primary/20 border-l-6 border-l-primary font-bold shadow-sm" : "text-muted-foreground hover:bg-muted hover:text-primary"}`}
                   >
                     <div className="font-medium">{component.title}</div>
                     <div className="text-xs text-muted-foreground mt-1 line-clamp-2">{component.description}</div>
@@ -126,9 +128,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             )}
           </div>
 
-          <Link href="/blog" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Blog</Link>
-          <Link href="/success-stories" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Success Stories</Link>
-          <Link href="/contact" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Contact Us</Link>
+          <Link href="/blog" onClick={onClose} className={`px-6 py-4 font-medium transition-colors border-b border-border relative ${pathname === "/blog" ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}>Blog</Link>
+          <Link href="/success-stories" onClick={onClose} className={`px-6 py-4 font-medium transition-colors border-b border-border relative ${pathname === "/success-stories" ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}>Success Stories</Link>
+          <Link href="/contact" onClick={onClose} className={`px-6 py-4 font-medium transition-colors border-b border-border relative ${pathname === "/contact" ? "text-primary bg-primary/15 border-l-8 border-l-primary font-bold shadow-sm" : "text-foreground hover:bg-muted hover:text-primary"}`}>Contact Us</Link>
 
           <div className="px-6 py-4">
             <Link href="/booking" onClick={onClose} className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105">
@@ -144,6 +146,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -169,17 +172,31 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                 <NavigationMenu>
                   <NavigationMenuList className="space-x-1">
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/">Home</NavigationMenuLink>
+                      <div className="relative">
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/" ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`} href="/">Home</NavigationMenuLink>
+                        {pathname === "/" && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/about">About</NavigationMenuLink>
+                      <div className="relative">
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/about" ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`} href="/about">About</NavigationMenuLink>
+                        {pathname === "/about" && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-muted-foreground hover:text-primary">Services</NavigationMenuTrigger>
+                      <div className="relative">
+                        <NavigationMenuTrigger className={`${pathname.startsWith('/services') ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`}>Services</NavigationMenuTrigger>
+                        {pathname.startsWith('/services') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-border backdrop-blur-md">
                           {components.map((component) => (
-                            <ListItem key={component.title} title={component.title} href={component.href} className="rounded-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 border border-border hover:border-primary p-3 hover:shadow-md transition-all duration-300 hover:scale-105">
+                            <ListItem 
+                              key={component.title} 
+                              title={component.title} 
+                              href={component.href} 
+                              className={`rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 border hover:border-primary p-3 hover:shadow-md transition-all duration-300 hover:scale-105 ${pathname === component.href ? "bg-primary/10 border-primary shadow-lg ring-1 ring-primary/20" : "bg-gray-50 dark:bg-gray-800 border-border"}`}
+                            >
                               {component.description}
                             </ListItem>
                           ))}
@@ -187,13 +204,22 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/blog">Blog</NavigationMenuLink>
+                      <div className="relative">
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/blog" ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`} href="/blog">Blog</NavigationMenuLink>
+                        {pathname === "/blog" && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/success-stories">Success Stories</NavigationMenuLink>
+                      <div className="relative">
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/success-stories" ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`} href="/success-stories">Success Stories</NavigationMenuLink>
+                        {pathname === "/success-stories" && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/contact">Contact Us</NavigationMenuLink>
+                      <div className="relative">
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/contact" ? "text-primary font-semibold" : "text-muted-foreground"} hover:text-primary transition-colors duration-200`} href="/contact">Contact Us</NavigationMenuLink>
+                        {pathname === "/contact" && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"></div>}
+                      </div>
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>

@@ -81,7 +81,7 @@ export function About() {
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 With years of experience in academic writing and a deep understanding of what makes applications
-                successful, we've helped <span className="font-semibold gradient-text-alt">hundreds of students</span>{" "}
+                successful, we&apos;ve helped <span className="font-semibold gradient-text-alt">hundreds of students</span>{" "}
                 gain admission to their dream institutions and secure their ideal career opportunities.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
@@ -149,7 +149,7 @@ export function About() {
               Ready to Start Your <span className="gradient-text">Success Story</span>?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join hundreds of successful students who trusted us with their academic journey. Let's craft your perfect
+              Join hundreds of successful students who trusted us with their academic journey. Let&apos;s craft your perfect
               application together.
             </p>
             <div className="flex justify-center space-x-8 text-center">
