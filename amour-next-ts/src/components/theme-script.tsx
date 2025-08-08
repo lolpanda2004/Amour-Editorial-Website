@@ -1,7 +1,5 @@
 "use client"
 
-import { useEffect, useState } from "react"
-
 export function ThemeScript() {
   return (
     <script

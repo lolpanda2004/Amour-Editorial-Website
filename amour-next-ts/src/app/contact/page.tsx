@@ -182,7 +182,7 @@ export default function Contact() {
         message: ''
       });
       
-    } catch (error) {
+    } catch {
       setToast({
         message: 'Failed to send message. Please try again.',
         type: 'error',
@@ -246,7 +246,7 @@ export default function Contact() {
               data-aos-delay="100"
             >
               Have questions about our services? Ready to start crafting your compelling story? 
-              We're here to help you every step of the way.
+              We&apos;re here to help you every step of the way.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-4">
                     <h2 className="text-2xl font-bold text-gray-900">Send us a Message</h2>
-                    <p className="text-gray-600">We'd love to hear from you</p>
+                    <p className="text-gray-600">We&apos;d love to hear from you</p>
                   </div>
                 </div>
 
@@ -400,7 +400,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8" data-aos="fade-left" data-aos-delay="300">
               <div className="bg-white rounded-2xl p-8 border border-amber-100 dark:border-gray-700">
-                <h2 className="text-2xl font-bold text-gray-900  mb-6">Let's Connect</h2>
+                <h2 className="text-2xl font-bold text-gray-900  mb-6">Let&apos;s Connect</h2>
                 <p className=" mb-8 leading-relaxed">
                   Ready to transform your academic journey? Our expert team is here to help you craft 
                   compelling stories that open doors to your dream opportunities.
@@ -434,7 +434,7 @@ export default function Contact() {
               >
                 <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
                 <p className="mb-6 opacity-90">
-                  Book a free consultation and let's discuss how we can help you achieve your goals.
+                  Book a free consultation and let&apos;s discuss how we can help you achieve your goals.
                 </p>
                 <a
                   href="/booking"
@@ -451,4 +451,3 @@ export default function Contact() {
     </div>
   );
 }
-

@@ -29,7 +29,7 @@ export function Contact() {
     console.log("Form submitted:", formData)
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
     setIsSubmitting(false)
-    alert("Thank you for your message! We'll get back to you soon.")
+    alert("Thank you for your message! We&apos;ll get back to you soon.")
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -90,7 +90,7 @@ export function Contact() {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Ready to start your journey? Contact us today for a{" "}
-            <span className="font-semibold gradient-text-alt">free consultation</span> and let's discuss how we can help
+            <span className="font-semibold gradient-text-alt">free consultation</span> and let&apos;s discuss how we can help
             you achieve your goals.
           </p>
         </div>
@@ -104,7 +104,7 @@ export function Contact() {
                 Send us a Message
               </CardTitle>
               <p className="text-gray-600">
-                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
               </p>
             </CardHeader>
             <CardContent>
@@ -259,7 +259,7 @@ export function Contact() {
                   <p className="text-gray-600 mb-4">Interactive Map Coming Soon</p>
                   <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-slow"></div>
-                    <span className="text-sm font-medium text-gray-700">We're here to help!</span>
+                    <span className="text-sm font-medium text-gray-700">We&apos;re here to help!</span>
                   </div>
                 </div>
               </div>

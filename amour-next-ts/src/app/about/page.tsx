@@ -132,7 +132,7 @@ export default function AboutPage() {
 							Amour Editorial is dedicated to helping students and
 							professionals tell their stories with clarity,
 							authenticity, and impact. Our mission is to empower
-							applicants to the world's top universities and
+							applicants to the world&apos;s top universities and
 							organizations by transforming their experiences into
 							compelling narratives.
 						</p>
@@ -160,7 +160,7 @@ export default function AboutPage() {
 								Our team combines years of experience in
 								admissions consulting, editing, and
 								storytelling. We believe every applicant has a
-								unique story, and we're here to help you tell it
+								unique story, and we&apos;re here to help you tell it
 								in the most authentic and impactful way
 								possible.
 							</p>
@@ -388,11 +388,11 @@ priority
 						Our Mission
 					</h2>
 					<blockquote className='text-xl  leading-relaxed italic mb-8'>
-						"To empower students and professionals by transforming
+						&ldquo;To empower students and professionals by transforming
 						their unique experiences into compelling narratives that
 						open doors to their dream opportunities. We believe that
-						everyone has a story worth telling, and we're here to
-						help them tell it beautifully."
+						everyone has a story worth telling, and we&apos;re here to
+						help them tell it beautifully.&rdquo;
 					</blockquote>
 					<div className='flex items-center justify-center space-x-4'>
 						<img
