@@ -1,43 +1,84 @@
+<!-- preview.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us | Amour Editorials</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview - Testimonials</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="preview.html">Preview</a></li>
-      <li><a href="techstack.html">Tech Stack</a></li>
-      <li><a href="installation.html">Installation</a></li>
-      <li><a href="folderstructure.html">Folder Structure</a></li>
-      <li><a href="requirements.html">Requirement Document</a></li>
-      <li><a href="contributing.html">Contributing</a></li>
-    </ul>
-  </nav>
-<main>
-  <h1>Preview</h1>
-  <table>
-    <tr><th>Page Name</th><th>Description</th></tr>
-    <tr><td>🏠 Landing Page</td><td>Introduces the brand, key offerings, and CTA links</td></tr>
-    <tr><td>🧍 About Us</td><td>Shares the story, mission, and team bios</td></tr>
-    <tr><td>📑 Services</td><td>Describes SOP, LOR, and editing services in detail</td></tr>
-    <tr><td>💬 Testimonials</td><td>Feedback from clients</td></tr>
-    <tr><td>❓ FAQs</td><td>Common questions answered</td></tr>
-    <tr><td>📚 Resources</td><td>Sample docs and tips</td></tr>
-    <tr><td>📝 Blog</td><td>Articles on writing and admissions</td></tr>
-    <tr><td>📅 Booking Page</td><td>Schedule demos/consultations</td></tr>
-    <tr><td>📩 Contact Page</td><td>Submit queries or emails</td></tr>
-    <tr><td>🔐 Privacy & Terms</td><td>Legal sections</td></tr>
-  </table>
-</main>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">YourLogo</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="preview.html" class="active">Preview</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="techstack.html">Tech Stack</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
 
-  
+  <main>
+    <section class="hero">
+      <h1>Our Success Stories</h1>
+      <p>See what our users have to say about us</p>
+    </section>
 
+    <!-- ===== TESTIMONIAL WALL ===== -->
+    <section class="testimonial-wall">
+      <h2 class="section-title">Testimonials</h2>
 
-  <script src="js/script.js"></script>
+      <!-- Filter Buttons -->
+      <div class="testimonial-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="SOP">SOP</button>
+        <button class="filter-btn" data-filter="LOR">LOR</button>
+        <button class="filter-btn" data-filter="Editing">Editing</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="testimonial-grid">
+        <!-- Example Card -->
+        <div class="testimonial-card" data-category="SOP">
+          <p>"The SOP guidance was absolutely top-notch! Clear, concise, and personalized."</p>
+          <span>- Alex</span>
+        </div>
+
+        <div class="testimonial-card" data-category="LOR">
+          <p>"They helped me get a powerful Letter of Recommendation that impressed my university."</p>
+          <span>- Priya</span>
+        </div>
+
+        <div class="testimonial-card" data-category="Editing">
+          <p>"Their editing service made my application shine like never before!"</p>
+          <span>- Daniel</span>
+        </div>
+
+        <!-- Video Example -->
+        <div class="testimonial-card video" data-category="SOP" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <p>🎥 Click to watch Alex's story</p>
+          <span>- Alex</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="testimonial-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Your Company. All rights reserved.</p>
+  </footer>
 </body>
 </html>
