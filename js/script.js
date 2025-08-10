@@ -5,50 +5,55 @@ document.querySelectorAll("nav a").forEach(link => {
   }
 });
 // ==== TESTIMONIAL FILTERS ====
-const filterButtons = document.querySelectorAll('.filter-btn');
-const testimonialCards = document.querySelectorAll('.testimonial-card');
+document.addEventListener("DOMContentLoaded", () => {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const testimonialCards = document.querySelectorAll(".testimonial-card");
+  const modal = document.getElementById("testimonial-modal");
+  const modalBody = modal.querySelector(".modal-body");
+  const closeModal = modal.querySelector(".close-modal");
 
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  // Filter Functionality with Fade Animation
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    const category = btn.getAttribute('data-filter');
-    testimonialCards.forEach(card => {
-      if (category === 'all' || card.getAttribute('data-category') === category) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      const filterValue = btn.dataset.filter;
+      testimonialCards.forEach(card => {
+        card.style.opacity = 0;
+        setTimeout(() => {
+          if (filterValue === "all" || card.dataset.category === filterValue) {
+            card.style.display = "inline-block";
+            setTimeout(() => card.style.opacity = 1, 100);
+          } else {
+            card.style.display = "none";
+          }
+        }, 300);
+      });
     });
   });
-});
 
-// ==== MODAL FUNCTIONALITY ====
-const modal = document.getElementById('testimonial-modal');
-const modalBody = modal.querySelector('.modal-body');
-const closeModal = modal.querySelector('.close-modal');
-
-testimonialCards.forEach(card => {
-  card.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    if (card.classList.contains('video')) {
-      const videoURL = card.getAttribute('data-video');
-      modalBody.innerHTML = `<iframe src="${videoURL}" allowfullscreen></iframe>`;
-    } else {
-      modalBody.innerHTML = `<p>${card.querySelector('p').textContent}</p><span>${card.querySelector('span').textContent}</span>`;
-    }
+  // Card Click - Open Modal
+  testimonialCards.forEach(card => {
+    card.addEventListener("click", () => {
+      if (card.classList.contains("video")) {
+        const videoUrl = card.dataset.video;
+        modalBody.innerHTML = `<iframe src="${videoUrl}" allowfullscreen></iframe>`;
+      } else {
+        const text = card.querySelector("p").innerText;
+        const author = card.querySelector("span").innerText;
+        modalBody.innerHTML = `<p style="font-size:1.1rem;">${text}</p><strong>${author}</strong>`;
+      }
+      modal.style.display = "block";
+    });
   });
-});
 
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-  modalBody.innerHTML = '';
-});
+  // Close Modal
+  closeModal.addEventListener("click", closeModalFunc);
+  window.addEventListener("click", (e) => { if (e.target === modal) closeModalFunc(); });
 
-window.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-    modalBody.innerHTML = '';
+  function closeModalFunc() {
+    modal.style.display = "none";
+    modalBody.innerHTML = "";
   }
 });
