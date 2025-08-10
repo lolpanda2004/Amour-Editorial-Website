@@ -70,12 +70,7 @@ main {
       line-height:1.45;
     }
 
-    /* NAV (kept intact) */
-    header{background:#111827}
-    .navbar{max-width:1200px;margin:0 auto;padding:12px 20px}
-    .navbar ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-    .navbar a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px;display:inline-block;font-weight:600}
-    .navbar a:hover{background:rgba(255,255,255,0.04);color:var(--accent)}
+
 
     main{max-width:1200px;margin:28px auto;padding:20px}
 
