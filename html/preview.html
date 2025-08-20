@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preview - Testimonial Wall + Add Feedback</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="preview.html">Preview</a></li>
+        <li><a href="techstack.html">Tech Stack</a></li>
+        <li><a href="installation.html">Installation</a></li>
+        <li><a href="folderstructure.html">Folder Structure</a></li>
+        <li><a href="requirements.html">Requirement Document</a></li>
+        <li><a href="contributing.html">Contributing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Our Success Stories — Testimonial Wall</h1>
+      <p>Filter by category. Submit text or record voice feedback below — new testimonials appear instantly.</p>
+    </section>
+
+    <!-- Filters -->
+    <div class="filters" role="tablist" aria-label="Testimonial filters">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="SOP">SOP</button>
+      <button class="filter-btn" data-filter="LOR">LOR</button>
+      <button class="filter-btn" data-filter="Editing">Editing</button>
+    </div>
+
+    <!-- Testimonial Wall -->
+    <section class="testimonial-wall" aria-labelledby="wall-heading">
+      <div id="wall-heading" class="sr-only">Testimonial wall</div>
+      <div id="masonry" class="masonry" aria-live="polite">
+        <!-- Existing sample cards -->
+        <article class="card" data-category="SOP">
+          <div class="meta">
+            <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="Alex avatar">
+            <div>
+              <div class="who">Alex Johnson</div>
+              <div class="badge">SOP • Student</div>
+            </div>
+            <div class="cat">SOP</div>
+          </div>
+          <p>"The SOP guidance was absolutely top-notch! Clear, concise, and personalized."</p>
+          <div class="footer"><div class="badge">★★★★★</div><div class="muted">June 2025</div></div>
+        </article>
+
+        <article class="card" data-category="LOR">
+          <div class="meta">
+            <img class="avatar" src="https://i.pravatar.cc/80?img=24" alt="Priya avatar">
+            <div>
+              <div class="who">Priya Sharma</div>
+              <div class="badge">LOR • Applicant</div>
+            </div>
+            <div class="cat">LOR</div>
+          </div>
+          <p>"They helped me get a powerful Letter of Recommendation that impressed my university."</p>
+          <div class="footer"><div class="badge">★★★★☆</div><div class="muted">May 2025</div></div>
+        </article>
+
+        <article class="card video" data-category="SOP" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <div class="meta">
+            <img class="avatar" src="https://i.pravatar.cc/80?img=8" alt="Daniel avatar">
+            <div>
+              <div class="who">Daniel Lee</div>
+              <div class="badge">SOP • Graduate</div>
+            </div>
+            <div class="cat">SOP</div>
+          </div>
+          <p>🎥 Alex shares his experience — click to watch his short video testimonial.</p>
+          <div class="footer"><div class="badge">Video</div><div class="muted">April 2025</div></div>
+        </article>
+
+        <article class="card" data-category="Editing">
+          <div class="meta">
+            <img class="avatar" src="https://i.pravatar.cc/80?img=32" alt="Sara avatar">
+            <div>
+              <div class="who">Sara Khan</div>
+              <div class="badge">Editing • Applicant</div>
+            </div>
+            <div class="cat">Editing</div>
+          </div>
+          <p>"Their editing service made my application shine like never before!"</p>
+          <div class="footer"><div class="badge">★★★★★</div><div class="muted">March 2025</div></div>
+        </article>
+      </div>
+
+      <div id="noResults" class="no-results" style="display:none">No testimonials match this filter.</div>
+    </section>
+
+    <!-- Pages Table -->
+    <section class="pages" aria-label="Website pages overview">
+      <h2 style="margin-top:0">Website Pages Overview</h2>
+      <table>
+        <thead>
+          <tr><th>Page Name</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🏠 Landing Page</td><td>Introduces the brand, key offerings, and CTA links</td></tr>
+          <tr><td>🧍 About Us</td><td>Shares the story, mission, and team bios</td></tr>
+          <tr><td>📑 Services</td><td>Describes SOP, LOR, and editing services in detail</td></tr>
+          <tr><td>💬 Testimonials</td><td>Feedback from clients</td></tr>
+          <tr><td>❓ FAQs</td><td>Common questions answered</td></tr>
+          <tr><td>📚 Resources</td><td>Sample docs and tips</td></tr>
+          <tr><td>📝 Blog</td><td>Articles on writing and admissions</td></tr>
+          <tr><td>📅 Booking Page</td><td>Schedule demos/consultations</td></tr>
+          <tr><td>📩 Contact Page</td><td>Submit queries or emails</td></tr>
+          <tr><td>🔐 Privacy & Terms</td><td>Legal sections</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Add Feedback -->
+    <section class="add-feedback" aria-labelledby="add-feedback-heading">
+      <h2 id="add-feedback-heading">Share Your Feedback</h2>
+
+      <form id="feedbackForm">
+        <div class="form-row">
+          <div class="col">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="col">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select category</option>
+              <option value="SOP">SOP</option>
+              <option value="LOR">LOR</option>
+              <option value="Editing">Editing</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px">
+          <label for="textFeedback">Your Feedback (text)</label>
+          <textarea id="textFeedback" name="textFeedback" placeholder="Write your feedback here" required></textarea>
+        </div>
+
+        <div>
+          <label>Record Voice Feedback (optional)</label>
+          <div class="controls">
+            <button type="button" id="startRecord">🎤 Start Recording</button>
+            <button type="button" id="stopRecord" disabled class="secondary">⏹ Stop</button>
+            <button type="button" id="clearAudio" class="secondary" title="Clear recorded audio">✖ Clear</button>
+          </div>
+          <div class="audio-playback">
+            <audio id="audioPlayback" controls style="display:none"></audio>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">Submit Feedback</button>
+        </div>
+      </form>
+
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">
+        Tip: after submitting, your feedback will appear instantly on the testimonial wall. Audio is kept in-browser via an object URL (no server).
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Video modal -->
+  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="inner" role="document">
+      <div id="playerWrapper" style="background:#000;border-radius:8px;overflow:hidden"></div>
+      <div class="close"><button id="closeModalBtn" aria-label="Close video">Close</button></div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

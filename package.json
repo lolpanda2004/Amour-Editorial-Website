@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "@types/aos": "^3.0.7"
+  },
+  "name": "amour-editorial-website",
+  "version": "1.0.0",
+  "description": "**Amour Editorials** is a professional platform that helps students and professionals craft compelling Statements of Purpose (SOPs), Letters of Recommendation (LORs), and other academic documents — turning their dreams into impactful stories.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install::fe": "cd amour-next-ts && npm i",
+    "install::be": "cd amour-Backend && npm i",
+    "install": "npm run install::fe && npm run install::be",
+    "dev": "npx concurrently \"npm run dev::fe\" \"npm run dev::be\"",
+    "dev::fe": "npm run dev --prefix amour-next-ts",
+    "dev::be": "node amour-Backend/index.js",
+    "start": "npm run install && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkshayb/Amour-Editorial-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lkshayb/Amour-Editorial-Website/issues"
+  },
+  "homepage": "https://github.com/lkshayb/Amour-Editorial-Website#readme",
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "concurrently": "^9.2.0"
+  }
+}
