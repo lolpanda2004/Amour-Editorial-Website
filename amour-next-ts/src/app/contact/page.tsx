@@ -259,7 +259,7 @@ export default function Contact() {
                     <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h2 className="text-2xl font-bold text-gray-900">Send us a Message</h2>
+                    <h2 className="text-4xl font-bold text-gray-900">Send us a Message</h2>
                     <p className="text-gray-600">We&apos;d love to hear from you</p>
                   </div>
                 </div>
