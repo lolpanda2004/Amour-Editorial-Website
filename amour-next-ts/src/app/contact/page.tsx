@@ -253,7 +253,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Contact Form */}
             <div data-aos="fade-right" data-aos-delay="200">
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 lg:p-10">
+              <div className=" rounded-2xl shadow-xl border border-amber-400 p-8 lg:p-10 backdrop-blur-md bg-white/70">
                 <div className="flex items-center mb-8">
                   <div className="bg-gradient-to-r from-amber-500 to-orange-600 p-3 rounded-xl">
                     <MessageSquare className="w-6 h-6 text-white" />
@@ -399,7 +399,7 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="space-y-8" data-aos="fade-left" data-aos-delay="300">
-              <div className="bg-white rounded-2xl p-8 border border-amber-100 dark:border-gray-700">
+              <div className="bg-white rounded-2xl p-8 border border-amber-400 dark:border-gray-700">
                 <h2 className="text-2xl font-bold text-gray-900  mb-6">Let&apos;s Connect</h2>
                 <p className=" mb-8 leading-relaxed">
                   Ready to transform your academic journey? Our expert team is here to help you craft 
@@ -417,7 +417,7 @@ export default function Contact() {
                       <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${info.color} mb-4`}>
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{info.title}</h3>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{info.title}</h4>
                       {info.details.map((detail, idx) => (
                         <p key={idx} className="text-sm text-gray-600 dark:text-gray-300">{detail}</p>
                       ))}
