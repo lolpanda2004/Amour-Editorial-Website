@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Footer: FC = () => {
   return (

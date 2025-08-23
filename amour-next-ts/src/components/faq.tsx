@@ -97,7 +97,7 @@ export function FAQ() {
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
             <p className="text-gray-600 mb-6">
-              Can't find the answer you're looking for? Our team is here to help you with any questions about our
+              Can&apos;t find the answer you&apos;re looking for? Our team is here to help you with any questions about our
               services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

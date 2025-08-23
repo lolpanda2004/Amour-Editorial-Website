@@ -364,7 +364,7 @@ export default function Home() {
           </h2>
           <p
             data-aos="fade-up"
-            className="text-lg text-primary-foreground/90 max-w-3xl mx-auto mb-8 font-body"
+            className="text-lg text-primary-foreground max-w-3xl mx-auto mb-8 font-body"
           >
             Let&#39;s craft a narrative that opens doors to your future.
           </p>

@@ -62,7 +62,7 @@ export function Testimonials() {
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our successful clients have to say about their experience.
+            Don&apos;t just take our word for it. Here&apos;s what our successful clients have to say about their experience.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function Testimonials() {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed italic">"{testimonial.content}"</p>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center space-x-4">
                   <img
                     src={testimonial.image || "/placeholder.svg"}
