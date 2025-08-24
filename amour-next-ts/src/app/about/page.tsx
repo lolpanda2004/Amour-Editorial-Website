@@ -1,4 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card'
+import image1 from '/public/image/avatar1.jpg'
+import image2 from '/public/image/avatar2.jpg'
+import image3 from '/public/image/avatar3.jpg'
+import image4 from '/public/image/avatar4.png'
 import {
 	Award,
 	Target,
@@ -45,28 +49,28 @@ export default function AboutPage() {
 			role: 'Co-Founder & Lead Editor',
 			education: 'Alumni of world-renowned institution',
 			experience: '7+ years in academic writing',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/image/avatar2.jpg',
 		},
 		{
 			name: 'Lathika',
 			role: 'Co-Founder & Senior Consultant',
 			education: 'Alumni of world-renowned institution',
 			experience: '6+ years in admissions consulting',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/image/avatar1.jpg',
 		},
 		{
 			name: 'Dr. Emily Rodriguez',
 			role: 'Medical Applications Specialist',
 			education: 'MD from Johns Hopkins, MPH',
 			experience: '6+ years in medical admissions',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/image/avatar3.jpg',
 		},
 		{
 			name: 'David Kim',
 			role: 'Business Applications Expert',
 			education: 'MBA from Wharton, CPA',
 			experience: '7+ years in business consulting',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/image/avatar4.png',
 		},
 	]
 
@@ -282,22 +286,22 @@ priority
 									index + 1
 								}`}
 							>
-								<CardContent className='p-6 text-center'>
+								<CardContent className='p-6 text-center select-none'>
 									<img
 										src={member.image || '/placeholder.svg'}
 										alt={member.name}
-										className='w-24 h-24 rounded-full mx-auto mb-4 object-cover'
+										className='w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200 shadow-sm select-none'
 									/>
-									<h4 className='text-lg font-semibold text-gray-900 mb-1'>
+									<h4 className='text-lg font-semibold text-gray-900 mb-1 select-none'>
 										{member.name}
 									</h4>
-									<p className='text-amber-600 font-medium mb-2 text-sm'>
+									<p className='text-amber-600 font-medium mb-2 text-sm select-none'>
 										{member.role}
 									</p>
-									<p className='text-gray-600 text-xs mb-2'>
+									<p className='text-gray-600 text-xs mb-2 select-none'>
 										{member.education}
 									</p>
-									<p className='text-gray-500 text-xs'>
+									<p className='text-gray-500 text-xs select-none'>
 										{member.experience}
 									</p>
 								</CardContent>
