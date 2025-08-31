@@ -929,7 +929,7 @@ export default function ResumeServicePage() {
                         </a>
                     </div>
                 </div>
-            </section>
+            </section> 
         </div>
     )
 }

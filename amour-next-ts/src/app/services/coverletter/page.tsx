@@ -699,7 +699,7 @@ export default function CoverLettersServicePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Competitive <span className="text-[#8b2635]">Advantages</span>
-            </h2>
+            </h2> 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the transformative power of professionally crafted
               psychological persuasion.

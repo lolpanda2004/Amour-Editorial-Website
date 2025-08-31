@@ -639,7 +639,7 @@ export default function TranscriptsServicePage() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> 
 		</div>
 	)
 }
