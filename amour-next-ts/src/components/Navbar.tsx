@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X, ChevronDown, ChevronUp } from "lucide-react"
+import * as React from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -13,8 +13,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { SimpleDarkModeToggle } from "@/components/ui/dark-mode-toggle"
+} from "@/components/ui/navigation-menu";
+import { SimpleDarkModeToggle } from "@/components/ui/dark-mode-toggle";
 
 const components = [
   {
@@ -31,14 +31,14 @@ const components = [
   },
   {
     title: "Personal Essays",
-    href: "/services/essays",
-    description:
-      "Tell your unique story with authenticity and impact.",
+    href: "/services/personalessay",
+    description: "Tell your unique story with authenticity and impact.",
   },
   {
     title: "Cover Letters",
-    href: "/services/cover-letters",
-    description: "Professional cover letters that make you stand out to employers.",
+    href: "/services/coverletter",
+    description:
+      "Professional cover letters that make you stand out to employers.",
   },
   {
     title: "Resume",
@@ -51,7 +51,7 @@ const components = [
     href: "/services/transcripts",
     description: "Academic transcript reviews and optimization services.",
   },
-]
+];
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -97,7 +97,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               className="w-full px-6 py-4 text-left text-foreground hover:bg-muted hover:text-primary font-medium transition-colors flex items-center justify-between"
             >
               Services
-              {isServicesOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              {isServicesOpen ? (
+                <ChevronUp className="w-4 h-4" />
+              ) : (
+                <ChevronDown className="w-4 h-4" />
+              )}
             </button>
             {isServicesOpen && (
               <div className="bg-muted/50">
@@ -109,7 +113,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     className="block px-8 py-3 text-sm text-muted-foreground hover:bg-muted hover:text-primary transition-colors"
                   >
                     <div className="font-medium">{component.title}</div>
-                    <div className="text-xs text-muted-foreground mt-1 line-clamp-2">{component.description}</div>
+                    <div className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                      {component.description}
+                    </div>
                   </Link>
                 ))}
               </div>
@@ -121,7 +127,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <MobileNavLink href="/contact" label="Contact Us" onClose={onClose} />
 
           <div className="px-6 py-4">
-            <Link href="/booking" onClick={onClose} className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105">
+            <Link
+              href="/booking"
+              onClick={onClose}
+              className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105"
+            >
               Book Consultation
             </Link>
           </div>
@@ -154,7 +164,13 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
   return (
     <>
       <div className={`w-full ${fontClass}`}>
-        <nav className={`fixed top-0 left-0 z-40 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 dark:bg-background/95 backdrop-blur-md shadow-lg py-2 border-b border-border' : 'bg-transparent py-4'}`}>
+        <nav
+          className={`fixed top-0 left-0 z-40 w-full transition-all duration-300 ${
+            isScrolled
+              ? "bg-background/95 dark:bg-background/95 backdrop-blur-md shadow-lg py-2 border-b border-border"
+              : "bg-transparent py-4"
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center space-x-2">
@@ -213,7 +229,10 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
         </nav>
       </div>
 
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </>
   )
 }
