@@ -17,7 +17,9 @@
     "dev::fe": "npm run dev --prefix amour-next-ts",
     "dev::be": "node amour-Backend/index.js",
     "start": "npm run install && npm run dev",
-    "build": "next build"
+    "build": "next build",
+    "test:prod": "NODE_ENV=production npm test"
+
   },
   "repository": {
     "type": "git",
