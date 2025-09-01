@@ -16,7 +16,8 @@
     "dev": "npx concurrently \"npm run dev::fe\" \"npm run dev::be\"",
     "dev::fe": "npm run dev --prefix amour-next-ts",
     "dev::be": "node amour-Backend/index.js",
-    "start": "npm run install && npm run dev"
+    "start": "npm run install && npm run dev",
+    "build": "next build"
   },
   "repository": {
     "type": "git",

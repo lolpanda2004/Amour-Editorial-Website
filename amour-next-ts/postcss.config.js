@@ -1,10 +1,6 @@
-// tailwind.config.js
 module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        brand: "#8b2635",
-      },
-    },
+  plugins: {
+    "@tailwindcss/postcss": {},
+    autoprefixer: {},
   },
 };
