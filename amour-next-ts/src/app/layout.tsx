@@ -93,7 +93,8 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="font-body antialiased bg-background text-foreground">
+      <body className="font-body antialiased bg-background text-foreground" 
+      suppressHydrationWarning>
         <ClientLayout>
           <Navbar />
           {children}
