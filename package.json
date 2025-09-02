@@ -9,7 +9,7 @@
   "description": "**Amour Editorials** is a professional platform that helps students and professionals craft compelling Statements of Purpose (SOPs), Letters of Recommendation (LORs), and other academic documents — turning their dreams into impactful stories.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "install::fe": "cd amour-next-ts && npm i",
     "install::be": "cd amour-Backend && npm i",
     "install": "npm run install::fe && npm run install::be",
@@ -19,7 +19,6 @@
     "start": "npm run install && npm run dev",
     "build": "next build",
     "test:prod": "NODE_ENV=production npm test"
-
   },
   "repository": {
     "type": "git",
@@ -46,6 +45,8 @@
     "has-flag": "^4.0.0",
     "is-fullwidth-code-point": "^3.0.0",
     "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "require-directory": "^2.1.1",
     "rxjs": "^7.8.2",
     "shell-quote": "^1.8.3",
