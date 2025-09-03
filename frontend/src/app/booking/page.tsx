@@ -8,7 +8,7 @@ export default function BookingPage() {
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Book a Consultation</h1>
         <p className="text-lg mb-10">
-          Choose your slot for personalized editorial support. Let's craft your success story!
+          Choose your slot for personalized editorial support. Let&apos;s craft your success story!
         </p>
 
         {/* Calendly Embed */}

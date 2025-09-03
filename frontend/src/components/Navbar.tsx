@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { SimpleDarkModeToggle } from "@/components/ui/dark-mode-toggle"
 
-const components: { title: string; href: string; description: string }[] = [
+const components = [
   {
     title: "Statement of Purpose",
     href: "/services/sop",
@@ -59,30 +59,20 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-      setIsServicesOpen(false);
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset'
+    if (!isOpen) setIsServicesOpen(false)
+    return () => { document.body.style.overflow = 'unset' }
+  }, [isOpen])
 
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
-      <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
-      <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-background dark:bg-background shadow-2xl transform transition-transform duration-300 ease-in-out border-l border-border">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+      <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-background dark:bg-background shadow-2xl transition-transform duration-300 ease-in-out border-l border-border">
         <div className="flex items-center justify-between p-6 border-b border-border">
           <Link href="/" onClick={onClose}>
             <h2 className="text-xl font-bold text-foreground">
@@ -98,8 +88,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         <nav className="flex flex-col py-4">
-          <Link href="/" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Home</Link>
-          <Link href="/about" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">About</Link>
+          <MobileNavLink href="/" label="Home" onClose={onClose} />
+          <MobileNavLink href="/about" label="About" onClose={onClose} />
 
           <div className="border-b border-border">
             <button
@@ -126,9 +116,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             )}
           </div>
 
-          <Link href="/blog" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Blog</Link>
-          <Link href="/success-stories" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Success Stories</Link>
-          <Link href="/contact" onClick={onClose} className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border">Contact Us</Link>
+          <MobileNavLink href="/blog" label="Blog" onClose={onClose} />
+          <MobileNavLink href="/success-stories" label="Success Stories" onClose={onClose} />
+          <MobileNavLink href="/contact" label="Contact Us" onClose={onClose} />
 
           <div className="px-6 py-4">
             <Link href="/booking" onClick={onClose} className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105">
@@ -138,20 +128,28 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
+
+const MobileNavLink = ({ href, label, onClose }: { href: string, label: string, onClose: () => void }) => (
+  <Link
+    href={href}
+    onClick={onClose}
+    className="px-6 py-4 text-foreground hover:bg-muted hover:text-primary font-medium transition-colors border-b border-border"
+  >
+    {label}
+  </Link>
+)
 
 export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
@@ -160,7 +158,7 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center space-x-2">
-                <h1 className={`text-xl font-bold transition-colors text-foreground`}>
+                <h1 className="text-xl font-bold transition-colors text-foreground">
                   Amour <span className="text-primary">Editorial</span>
                 </h1>
               </Link>
@@ -168,42 +166,45 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
               <div className="hidden lg:flex items-center space-x-4">
                 <NavigationMenu>
                   <NavigationMenuList className="space-x-1">
+                    <NavItem href="/" label="Home" />
+                    <NavItem href="/about" label="About" />
                     <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/">Home</NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/about">About</NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-muted-foreground hover:text-primary">Services</NavigationMenuTrigger>
+                      <NavigationMenuTrigger className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">
+                        Services
+                      </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-border backdrop-blur-md">
                           {components.map((component) => (
-                            <ListItem key={component.title} title={component.title} href={component.href} className="rounded-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 border border-border hover:border-primary p-3 hover:shadow-md transition-all duration-300 hover:scale-105">
+                            <ListItem
+                              key={component.title}
+                              title={component.title}
+                              href={component.href}
+                              className="rounded-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 border border-border hover:border-primary p-3 hover:shadow-md transition-all duration-300 hover:scale-105"
+                            >
                               {component.description}
                             </ListItem>
                           ))}
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/blog">Blog</NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/success-stories">Success Stories</NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-muted-foreground hover:text-primary`} href="/contact">Contact Us</NavigationMenuLink>
-                    </NavigationMenuItem>
+                    <NavItem href="/blog" label="Blog" />
+                    <NavItem href="/success-stories" label="Success Stories" />
+                    <NavItem href="/contact" label="Contact Us" />
                   </NavigationMenuList>
                 </NavigationMenu>
                 <SimpleDarkModeToggle />
-                <Link href="/booking" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">Book Consultation</Link>
+                <Link href="/booking" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                  Book Consultation
+                </Link>
               </div>
 
               <div className="lg:hidden flex items-center space-x-2">
                 <SimpleDarkModeToggle />
-                <button onClick={() => setIsMobileMenuOpen(true)} className={`p-2 rounded-lg transition-colors text-foreground hover:bg-muted`} aria-label="Open mobile menu">
+                <button
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  className="p-2 rounded-lg transition-colors text-foreground hover:bg-muted"
+                  aria-label="Open mobile menu"
+                >
                   <Menu className="w-6 h-6" />
                 </button>
               </div>
@@ -214,18 +215,36 @@ export function NavigationMenuDemo({ fontClass = "" }: { fontClass?: string }) {
 
       <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </>
-  );
+  )
 }
 
-function ListItem({ title, children, href, className, ...props }: React.ComponentPropsWithoutRef<"li"> & { href: string; className?: string }) {
+const NavItem = ({ href, label }: { href: string; label: string }) => (
+  <NavigationMenuItem>
+   <NavigationMenuLink
+  className={`${navigationMenuTriggerStyle()} text-muted-foreground transition-all duration-300 hover:scale-105 hover:text-[#D4AF37] hover:drop-shadow-[0_0_4px_#D4AF37]`}
+  href={href}
+>
+
+      {label}
+    </NavigationMenuLink>
+  </NavigationMenuItem>
+)
+
+function ListItem({
+  title,
+  children,
+  href,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string; className?: string }) {
   return (
     <li {...props} className={className}>
       <NavigationMenuLink asChild>
-        <Link href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white focus:bg-gray-100 focus:text-gray-900 dark:focus:bg-gray-700 dark:focus:text-white">
+        <Link href={href} className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white focus:bg-gray-100 focus:text-gray-900 dark:focus:bg-gray-700 dark:focus:text-white">
           <div className="text-sm font-medium leading-none text-gray-900 dark:text-white">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-gray-600 dark:text-gray-300">{children}</p>
         </Link>
       </NavigationMenuLink>
     </li>
-  );
+  )
 }
