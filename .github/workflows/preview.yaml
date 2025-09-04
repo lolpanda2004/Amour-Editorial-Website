@@ -1,45 +1,28 @@
 name: Vercel Preview Deployment
 
-env:
-    VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-    VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
 on:
-    push:
-        branches-ignore:
-            - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    Test:
-        runs-on: ubuntu-latest
-        steps:
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.13.1
 
-            - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-            - uses: actions/setup-node@v3
-              with:
-                node-version: 18
-
-            - run: npm ci
-
-            - run: npm run test:prod
-
-    Deploy-Preview:
-        needs: [Test]
-        runs-on: ubuntu-latest
-        steps:
-
-            - uses: actions/checkout@v3
-
-            - name: Install Vercel CLI
-              run: npm install --global vercel
-
-            - name: Pull Vercel Environment Information
-              run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-
-            - name: Build Project Artifacts
-              run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-            - name: Deploy Project Artifacts
-              run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy to Vercel
+        run: pnpm dlx vercel --token=${{ secrets.VERCEL_TOKEN }} --yes

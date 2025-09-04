@@ -91,7 +91,7 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 | Frontend Hosting | Vercel                           |
 | Backend Hosting  | Render / Railway / AWS / Cyclic  |
 | DB (Optional)    | Supabase / MongoDB Atlas         |
-| CI/CD            | GitHub Actions (optional)        |
+| CI/CD            | GitHub Actions                   |
 
 ---
 
@@ -99,15 +99,25 @@ Amour Editorials was founded by Akshai Krishna A and Lathika D with the mission 
 
 ### Prerequisites:
 - Node.js ≥ 18.x
-- npm ≥ 9.x
+- pnpm ≥ 10.13.1
 
 ### Clone the Repository
 
-```bash
+bash
 git clone https://github.com/sneha-94/Amour-Editorial-Website.git
 cd Amour-Editorial-Website
-npm run start
-```
+
+# Install all dependencies for frontend + backend in one go
+pnpm install
+
+# Start both frontend and backend together
+pnpm dev
+
+# Run only the frontend (from the root folder)
+pnpm run dev:fe
+
+# Run only the backend (from the root folder)
+pnpm run dev:be
 
 > Access frontend: `http://localhost:3000`
 > Access backend: `http://localhost:5000` (or your configured port)
