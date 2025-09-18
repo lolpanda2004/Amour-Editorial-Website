@@ -104,7 +104,7 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-purple-400/30 rounded-3xl transform rotate-6 animate-pulse-slow"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-3xl transform -rotate-3 animate-float"></div>
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/hero-image.png"
                 alt="Our team at work"
                 className="relative rounded-3xl shadow-2xl w-full h-auto hover-lift"
               />
