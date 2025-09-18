@@ -1,0 +1,9 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <rect x="1" y="1" width="398" height="298" stroke="#d1d5db" stroke-width="2" fill="none"/>
+  <g transform="translate(200, 150)">
+    <circle cx="0" cy="-20" r="15" fill="#9ca3af"/>
+    <path d="M-30 20 Q0 0 30 20" stroke="#9ca3af" stroke-width="3" fill="none"/>
+    <text x="0" y="60" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Blog Image</text>
+  </g>
+</svg>

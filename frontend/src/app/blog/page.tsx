@@ -22,7 +22,7 @@ export default function BlogPage() {
 		author: 'Dr. Sarah Johnson',
 		date: '2024-01-20',
 		readTime: '12 min read',
-		image: '/placeholder.svg?height=400&width=600',
+		image: '/hero-image.png',
 		featured: true,
 	}
 
@@ -34,7 +34,7 @@ export default function BlogPage() {
 			category: 'SOP Tips',
 			author: 'Sarah Editorial',
 			date: '2024-01-15',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/team-image.png',
 			readTime: '5 min read',
 			trending: true,
 		},
@@ -45,7 +45,7 @@ export default function BlogPage() {
 			category: 'LOR Guide',
 			author: 'Michael Writer',
 			date: '2024-01-10',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/hero-image.png',
 			readTime: '7 min read',
 			trending: false,
 		},
@@ -56,7 +56,7 @@ export default function BlogPage() {
 			category: 'MBA',
 			author: 'Emily Expert',
 			date: '2024-01-05',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/team-image.png',
 			readTime: '10 min read',
 			trending: true,
 		},
@@ -67,7 +67,7 @@ export default function BlogPage() {
 			category: 'Strategy',
 			author: 'David Brand',
 			date: '2024-01-01',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/hero-image.png',
 			readTime: '6 min read',
 			trending: false,
 		},
@@ -78,7 +78,7 @@ export default function BlogPage() {
 			category: 'Insights',
 			author: 'Lisa Psychology',
 			date: '2023-12-28',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/team-image.png',
 			readTime: '8 min read',
 			trending: false,
 		},
@@ -89,7 +89,7 @@ export default function BlogPage() {
 			category: 'International',
 			author: 'James Global',
 			date: '2023-12-25',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/hero-image.png',
 			readTime: '9 min read',
 			trending: false,
 		},
@@ -100,7 +100,7 @@ export default function BlogPage() {
 			category: 'Medical',
 			author: 'Dr. Amanda Foster',
 			date: '2023-12-20',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/team-image.png',
 			readTime: '11 min read',
 			trending: false,
 		},
@@ -111,7 +111,7 @@ export default function BlogPage() {
 			category: 'Engineering',
 			author: 'Robert Tech',
 			date: '2023-12-15',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/hero-image.png',
 			readTime: '7 min read',
 			trending: false,
 		},
@@ -122,7 +122,7 @@ export default function BlogPage() {
 			category: 'Law',
 			author: 'Jennifer Legal',
 			date: '2023-12-10',
-			image: '/placeholder.svg?height=200&width=300',
+			image: '/team-image.png',
 			readTime: '8 min read',
 			trending: false,
 		},
@@ -210,6 +210,10 @@ export default function BlogPage() {
 											}
 											alt={featuredPost.title}
 											className='w-full h-64 md:h-full object-cover'
+											onError={(e) => {
+												const target = e.target as HTMLImageElement;
+												target.src = '/placeholder.svg';
+											}}
 										/>
 									</div>
 									<div className='md:w-1/2 p-8'>
@@ -281,6 +285,10 @@ export default function BlogPage() {
 													}
 													alt={post.title}
 													className='w-full h-48 object-cover rounded-t-lg'
+													onError={(e) => {
+														const target = e.target as HTMLImageElement;
+														target.src = '/placeholder.svg';
+													}}
 												/>
 												<Badge className='absolute top-3 left-3 bg-red-500 text-white'>
 													Trending
@@ -351,6 +359,10 @@ export default function BlogPage() {
 												}
 												alt={post.title}
 												className='w-full h-48 object-cover rounded-t-lg'
+												onError={(e) => {
+													const target = e.target as HTMLImageElement;
+													target.src = '/placeholder.svg';
+												}}
 											/>
 											<Badge className='absolute top-3 left-3 bg-amber-600 text-white'>
 												{post.category}
@@ -513,6 +525,10 @@ export default function BlogPage() {
 													}
 													alt={post.title}
 													className='w-16 h-16 object-cover rounded-lg flex-shrink-0'
+													onError={(e) => {
+														const target = e.target as HTMLImageElement;
+														target.src = '/placeholder.svg';
+													}}
 												/>
 												<div className='flex-1 min-w-0'>
 													<h4 className='text-sm font-medium text-gray-900 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2'>

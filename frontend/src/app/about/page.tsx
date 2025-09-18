@@ -45,28 +45,28 @@ export default function AboutPage() {
 			role: 'Co-Founder & Lead Editor',
 			education: 'Alumni of world-renowned institution',
 			experience: '7+ years in academic writing',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/team-image.png',
 		},
 		{
 			name: 'Lathika',
 			role: 'Co-Founder & Senior Consultant',
 			education: 'Alumni of world-renowned institution',
 			experience: '6+ years in admissions consulting',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/team-image.png',
 		},
 		{
 			name: 'Dr. Emily Rodriguez',
 			role: 'Medical Applications Specialist',
 			education: 'MD from Johns Hopkins, MPH',
 			experience: '6+ years in medical admissions',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/team-image.png',
 		},
 		{
 			name: 'David Kim',
 			role: 'Business Applications Expert',
 			education: 'MBA from Wharton, CPA',
 			experience: '7+ years in business consulting',
-			image: '/placeholder.svg?height=300&width=300',
+			image: '/team-image.png',
 		},
 	]
 
@@ -285,6 +285,10 @@ priority
 								<CardContent className='p-6 text-center'>
 									<img
 										src={member.image || '/placeholder.svg'}
+										onError={(e) => {
+											const target = e.target as HTMLImageElement;
+											target.src = '/placeholder.svg';
+										}}
 										alt={member.name}
 										className='w-24 h-24 rounded-full mx-auto mb-4 object-cover'
 									/>
@@ -396,9 +400,13 @@ priority
 					</blockquote>
 					<div className='flex items-center justify-center space-x-4'>
 						<img
-							src='/placeholder.svg?height=60&width=60'
+							src='/team-image.png'
 							alt='Akshai & Lathika'
 							className='w-12 h-12 rounded-full'
+							onError={(e) => {
+								const target = e.target as HTMLImageElement;
+								target.src = '/placeholder.svg';
+							}}
 						/>
 						<div className='text-left'>
 							<div className='font-semibold'>
