@@ -32,51 +32,71 @@ const stories = [
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="max-w-7xl mx-auto py-24 px-6 sm:px-12 lg:px-24 bg-background dark:bg-black">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6 text-foreground">
-        Success <span className="text-amber-600">Stories</span>
-      </h1>
-      <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-        Read the journeys of real students who turned dreams into offers from top universities.
-      </p>
+    <main className="relative max-w-7xl mx-auto py-24 px-6 sm:px-12 lg:px-24">
+      {/* Subtle background overlay for section focus */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full pointer-events-none z-0"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(255, 251, 235, 0.85) 0%, rgba(255, 247, 237, 0.85) 100%)",
+          // fallback for dark mode
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden dark:block"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(17, 24, 39, 0.92) 100%)",
+        }}
+      />
+      <div className="relative z-10">
+        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6 text-foreground">
+          Success <span className="text-amber-600">Stories</span>
+        </h1>
+        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          Read the journeys of real students who turned dreams into offers from top universities.
+        </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {stories.map((item, index) => (
-          <div
-            key={index}
-            className="group relative bg-white dark:bg-gray-900/80 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 dark:hover:shadow-amber-500/30 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-gray-800 backdrop-blur-sm"
-          >
-            {/* Glow Effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-600 to-red-600 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {stories.map((item, index) => (
+            <div
+              key={index}
+              className="group relative bg-white dark:bg-gray-900/80 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 dark:hover:shadow-amber-500/30 hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-gray-800 backdrop-blur-sm"
+            >
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-600 to-red-600 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
 
-            <div className="relative">
-              <Quote className="absolute -top-4 -left-3 h-8 w-8 text-amber-200/50 dark:text-amber-500/20" />
-              <h3 className="font-bold text-gray-900 dark:text-white text-center text-xl mb-1">{item.name}</h3>
-              <p className="text-amber-700 dark:text-amber-500 text-center mb-4 font-medium">{item.program}</p>
-              <p className="italic text-gray-700 dark:text-gray-300 mb-4 border-l-4 border-amber-500 pl-4 py-2">
-                {item.dream}
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{item.background}</p>
-              <div className="space-y-3">
-                <p className="text-gray-600 dark:text-gray-400">
-                  <span className="font-semibold text-gray-800 dark:text-white">How we helped:</span> {item.howWeHelped}
+              <div className="relative">
+                <Quote className="absolute -top-4 -left-3 h-8 w-8 text-amber-200/50 dark:text-amber-500/20" />
+                <h3 className="font-bold text-gray-900 dark:text-white text-center text-xl mb-1">{item.name}</h3>
+                <p className="text-amber-700 dark:text-amber-500 text-center mb-4 font-medium">{item.program}</p>
+                <p className="italic text-gray-700 dark:text-gray-300 mb-4 border-l-4 border-amber-500 pl-4 py-2">
+                  {item.dream}
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  <span className="font-semibold text-gray-800 dark:text-white">Outcome:</span> {item.outcome}
-                </p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{item.background}</p>
+                <div className="space-y-3">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    <span className="font-semibold text-gray-800 dark:text-white">How we helped:</span> {item.howWeHelped}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    <span className="font-semibold text-gray-800 dark:text-white">Outcome:</span> {item.outcome}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="text-center mt-20">
-        <Link
-          href="/booking"
-          className="inline-flex items-center bg-amber-600 dark:bg-red-600 text-white hover:bg-amber-700 dark:hover:bg-red-700 font-medium gap-2 px-6 py-3 rounded-full shadow-lg hover:shadow-amber-500/40 transition"
-        >
-          Start your journey
-        </Link>
+        <div className="text-center mt-20">
+          <Link
+            href="/booking"
+            className="inline-flex items-center bg-amber-600 dark:bg-red-600 text-white hover:bg-amber-700 dark:hover:bg-red-700 font-medium gap-2 px-6 py-3 rounded-full shadow-lg hover:shadow-amber-500/40 transition"
+          >
+            Start your journey
+          </Link>
+        </div>
       </div>
     </main>
   );
