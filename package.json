@@ -7,5 +7,15 @@
     "dev:fe": "pnpm --filter frontend dev",
     "dev:be": "pnpm --filter backend dev",
     "build": "pnpm -r build"
+  },
+  "dependencies": {
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.2"
   }
 }
