@@ -11,7 +11,7 @@ export function Testimonials() {
       content:
         "Amour Editorial transformed my SOP into a compelling narrative that truly reflected my journey. I got accepted into my dream MBA program!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
     {
       name: "Michael Chen",
@@ -19,7 +19,7 @@ export function Testimonials() {
       content:
         "The team understood my research background perfectly and crafted an SOP that highlighted my potential. Highly recommended!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
     {
       name: "Emily Rodriguez",
@@ -27,7 +27,7 @@ export function Testimonials() {
       content:
         "Professional, timely, and exceptional quality. They helped me articulate my passion for medicine in a way I never could.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
     {
       name: "David Kim",
@@ -35,7 +35,7 @@ export function Testimonials() {
       content:
         "The LOR they wrote for me was outstanding. It perfectly captured my technical skills and leadership potential.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
     {
       name: "Lisa Thompson",
@@ -43,14 +43,14 @@ export function Testimonials() {
       content:
         "Incredible attention to detail and understanding of what admissions committees look for. Worth every penny!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
     {
       name: "James Wilson",
       role: "Business Analyst at Goldman Sachs",
       content: "They helped me transition from academia to industry with a perfectly crafted professional narrative.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/team-image.png",
     },
   ]
 
@@ -86,6 +86,10 @@ export function Testimonials() {
                 <div className="flex items-center space-x-4">
                   <img
                     src={testimonial.image || "/placeholder.svg"}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/placeholder.svg';
+                    }}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover"
                   />

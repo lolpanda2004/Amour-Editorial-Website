@@ -15,7 +15,7 @@ export function Blog() {
       category: "SOP Tips",
       author: "Sarah Editorial",
       date: "2024-01-15",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "5 min read",
     },
     {
@@ -24,7 +24,7 @@ export function Blog() {
       category: "LOR Guide",
       author: "Michael Writer",
       date: "2024-01-10",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "7 min read",
     },
     {
@@ -33,7 +33,7 @@ export function Blog() {
       category: "MBA",
       author: "Emily Expert",
       date: "2024-01-05",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "10 min read",
     },
     {
@@ -42,7 +42,7 @@ export function Blog() {
       category: "Strategy",
       author: "David Brand",
       date: "2024-01-01",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "6 min read",
     },
     {
@@ -51,7 +51,7 @@ export function Blog() {
       category: "Insights",
       author: "Lisa Psychology",
       date: "2023-12-28",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "8 min read",
     },
     {
@@ -60,7 +60,7 @@ export function Blog() {
       category: "International",
       author: "James Global",
       date: "2023-12-25",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/team-image.png",
       readTime: "9 min read",
     },
   ]
@@ -89,6 +89,10 @@ export function Blog() {
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/placeholder.svg';
+                  }}
                 />
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-primary text-white">{post.category}</Badge>
